@@ -1,6 +1,6 @@
-# REFLEXION — Ejercicio [NÚMERO]: [NOMBRE]
+# REFLEXION — Ejercicio 1.3: Layout con Flexbox
 
-> **Instrucciones:** Reemplazá `[NÚMERO]` y `[NOMBRE]` con el número y nombre del ejercicio correspondiente. Completá este archivo DESPUÉS de terminar tu solución. Escribí con tus propias palabras.
+> **Instrucciones:** Completá este archivo después de terminar tu solución. Escribí con tus propias palabras.
 
 ---
 
@@ -8,25 +8,14 @@
 
 *Describí en 150–250 palabras qué hace tu solución y cuáles fueron las decisiones principales que tomaste.*
 
-> ✏️ **Tu respuesta aquí:**
+> Es una página sencilla ambientada en el estilo de Windows 98. Busqué que tuviera una estética retro, pero con un layout ordenado y construido con HTML y CSS modernos.
 
 ---
 
 ## Sección 2 — Preguntas conceptuales
 
-*Las preguntas conceptuales específicas de este ejercicio están en el `SPEC.md`. Respondé cada una aquí.*
-
-### 2.1 — [Pregunta del SPEC]
-
-> ✏️ **Tu respuesta:**
-
-### 2.2 — [Pregunta del SPEC]
-
-> ✏️ **Tu respuesta:**
-
-### 2.3 — [Pregunta del SPEC]
-
-> ✏️ **Tu respuesta:**
+*El `SPEC.md` no incluye las preguntas conceptuales que esta sección solicita. Por ese motivo, no hay preguntas para responder aca.*
+(voy a hacer un issue y veo si despues hay algo que completar.)
 
 ---
 
@@ -34,15 +23,18 @@
 
 ### 3.1 — ¿Qué fue lo más difícil de este ejercicio y cómo lo resolviste?
 
-> ✏️ **Tu respuesta:**
+> Lo más difícil fue estructurar los colores para que la página se viera como esperaba en el sentido retro
+pero sin verse feo y conservara la esencia de Windows 98.
 
 ### 3.2 — ¿Qué cambiarías si tuvieras que hacerlo de nuevo?
 
-> ✏️ **Tu respuesta:**
+> Si lo hiciera de nuevo, quizá cambiaría el layout de la galería y agregaría más imágenes. No tenía muchas imágenes pixel art para las animaciones para
+hacer algo estilo el clippy original de windows.
 
 ### 3.3 — ¿Qué alternativas consideraste y por qué las descartaste?
 
-> ✏️ **Tu respuesta:**
+> También consideré hacer algo con estética de Atari o PlayStation 2. Seguiría siendo retro, pero estaría más orientado a las consolas de la epoca.
+
 
 ---
 
@@ -51,13 +43,13 @@
 ```
 [ ] Resolví el ejercicio completamente sin ayuda de IA
 [ ] Usé IA para entender algún concepto, pero escribí el código yo
-[ ] Usé IA para generar un borrador que luego modifiqué y entendí
+[x] Usé IA para generar un borrador que luego modifiqué y entendí
 [ ] Usé IA extensamente y completé la reflexión para entender lo que hice
 ```
 
 *Si usaste IA, describí brevemente cómo:*
 
-> ✏️ **Tu respuesta (opcional si no usaste IA):**
+> Usé la IA para reordenar el CSS por partes, porque estaba muy cargado. También la usé como plantilla.
 
 ---
 
@@ -70,5 +62,8 @@ En una escala del 1 al 5, ¿cuánto entendés ahora el concepto central de este 
 [ ] 2 — Entiendo lo básico
 [ ] 3 — Lo entiendo bien
 [ ] 4 — Lo entiendo bien y puedo explicárselo a otro
-[ ] 5 — Podría dar una clase sobre esto
+[x] 5 — Podría dar una clase sobre esto
 ```
+
+Los flex son los contenedores, a mi parecer, más utiles.
+Son de los primeros estilos que aprendí a usar y de mis favoritos para hacer paginas.

@@ -1,0 +1,113 @@
+/* TP-CHECK: 1.3 | PIERONI-NICOLAS | flex-wrap hace: que se modifique el comportamiento cuando se agregan elementos al elemento flex (contenedor), permitiendo que bajen a otra linea si no hay lugar en el eje principal. */
+/* Estilos base: variables, normalización y componentes compartidos. */
+:root {
+  --color-primario: #000080;
+  --color-fondo: #008080;
+  --color-superficie: #c0c0c0;
+  --color-texto: #000000;
+  --color-resaltado: #ffffff;
+  --color-sombra: #808080;
+  --color-borde-oscuro: #404040;
+  --espacio: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 20rem;
+  margin: 0;
+  padding: var(--espacio);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  font-family: Tahoma, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-primario);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px dotted var(--color-primario);
+  outline-offset: 3px;
+}
+
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.contenido-pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: min(100%, 76rem);
+  margin-inline: auto;
+  padding-block: 1.5rem;
+}
+
+.ventana {
+  background: var(--color-superficie);
+  border: 2px outset var(--color-resaltado);
+  box-shadow: 2px 2px var(--color-sombra);
+}
+
+.ventana__barra-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.2rem 0.45rem;
+  color: var(--color-resaltado);
+  background: linear-gradient(90deg, var(--color-primario), #1084d0);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.ventana__controles {
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.45rem 0.9rem;
+  color: var(--color-texto);
+  background: var(--color-superficie);
+  border: 2px outset var(--color-resaltado);
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover,
+.boton.activo {
+  color: var(--color-resaltado);
+  background: var(--color-primario);
+}
+
+.boton:active {
+  border-style: inset;
+}
+
+.boton--primario {
+  margin-top: 0.5rem;
+}

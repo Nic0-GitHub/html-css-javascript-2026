@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Galería de proyectos de una agencia creativa con estética clásica de Windows 98.">
+    <title>Proyectos | 98 Studio</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="navegacion.css">
+    <link rel="stylesheet" href="proyectos.css">
+  </head>
+  <body>
+    <header class="encabezado-sitio">
+      <a class="marca" href="#inicio" aria-label="98 Studio, inicio">
+        <span class="marca__icono" aria-hidden="true">▣</span>
+        <span>98 Studio</span>
+      </a>
+
+      <nav class="navegacion-sitio" aria-label="Navegación principal">
+        <ul class="navegacion-sitio__lista">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#proyectos" aria-current="page">Proyectos</a></li>
+          <li><a href="#estudio">El estudio</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="inicio" class="contenido-pagina">
+      <section class="portada ventana" aria-labelledby="titulo-pagina">
+        <div class="ventana__barra-titulo">
+          <span>Bienvenido.exe</span>
+          <span class="ventana__controles" aria-hidden="true">_ □ ×</span>
+        </div>
+        <div class="portada__contenido">
+          <p class="antetitulo">PORTFOLIO · EDICIÓN 1998</p>
+          <h1 id="titulo-pagina">Proyectos del 1.3</h1>
+          <p>Una selección de proyectos para mostrar el uso de flex.</p>
+          <a class="boton boton--primario" href="#proyectos">Explorar proyectos</a>
+        </div>
+      </section>
+
+      <section class="filtros ventana" aria-labelledby="titulo-filtros">
+        <h2 id="titulo-filtros" class="solo-lectores">Filtros de proyectos</h2>
+        <p class="filtros__etiqueta">Ver:</p>
+        <div class="filtros__botones" aria-label="Categorías disponibles">
+          <button class="boton activo" type="button" aria-pressed="true">Todos</button>
+          <button class="boton" type="button" aria-pressed="false">Web</button>
+          <button class="boton" type="button" aria-pressed="false">Mobile</button>
+          <button class="boton" type="button" aria-pressed="false">Branding</button>
+        </div>
+      </section>
+
+      <section id="proyectos" class="proyectos" aria-labelledby="titulo-proyectos">
+        <header class="proyectos__encabezado">
+          <div>
+            <p class="antetitulo">ARCHIVO DE TRABAJOS</p>
+            <h2 id="titulo-proyectos">Nuestros proyectos</h2>
+          </div>
+          <p>Seis ideas que encontraron su forma.</p>
+        </header>
+
+        <div class="lista-proyectos">
+          <article class="tarjeta-proyecto tarjeta-proyecto--destacada ventana">
+            <div class="ventana__barra-titulo"><span>winemu98.exe</span><span aria-hidden="true">□ ×</span></div>
+            <figure class="tarjeta-proyecto__imagen">
+              <img src="https://placehold.co/640x360/008080/ffffff?text=WinEMU+98" alt="Vista previa de WinEMU 98">
+            </figure>
+            <div class="tarjeta-proyecto__contenido">
+              <h3>winemu 98</h3>
+              <p>Un emulador de Windows 98 para volver a explorar el escritorio y las aplicaciones clásicas del sistema RETRO más conocido..</p>
+              <ul class="lista-etiquetas" aria-label="Tecnologías y disciplinas">
+                <li>Emulador</li><li>Windows 98</li>
+              </ul>
+              <a class="boton tarjeta-proyecto__enlace" href="#contacto">Ver proyecto winemu 98</a>
+            </div>
+          </article>
+
+          <article class="tarjeta-proyecto ventana">
+            <div class="ventana__barra-titulo"><span>reacty.js</span><span aria-hidden="true">□ ×</span></div>
+            <figure class="tarjeta-proyecto__imagen">
+              <img src="https://placehold.co/640x360/000080/ffffff?text=reacty" alt="Vista previa de la librería reacty">
+            </figure>
+            <div class="tarjeta-proyecto__contenido">
+              <h3>reacty</h3>
+              <p>Una librería basada en React, presentada como proyecto práctico para el ejercicio 1.3.</p>
+              <ul class="lista-etiquetas" aria-label="Tecnologías y disciplinas">
+                <li>React</li><li>Librería</li>
+              </ul>
+              <a class="boton tarjeta-proyecto__enlace" href="#contacto">Ver proyecto reacty</a>
+            </div>
+          </article>
+
+          <article class="tarjeta-proyecto ventana">
+            <div class="ventana__barra-titulo"><span>ema.curso.desarrollo.exe</span><span aria-hidden="true">□ ×</span></div>
+            <figure class="tarjeta-proyecto__imagen">
+              <img src="https://placehold.co/640x360/808080/ffffff?text=Emacur" alt="Vista previa del curso práctico Emacur">
+            </figure>
+            <div class="tarjeta-proyecto__contenido">
+              <h3>Emacur</h3>
+              <p>Actividad práctica para organizar consignas, registrar avances y poner en uso los conceptos del curso.</p>
+              <ul class="lista-etiquetas" aria-label="Tecnologías y disciplinas">
+                <li>Curso</li><li>Actividad práctica</li>
+              </ul>
+              <a class="boton tarjeta-proyecto__enlace" href="#contacto">Ver proyecto Emacur</a>
+            </div>
+          </article>
+
+          <article class="tarjeta-proyecto ventana">
+            <div class="ventana__barra-titulo"><span>ej1.1.html</span><span aria-hidden="true">□ ×</span></div>
+            <figure class="tarjeta-proyecto__imagen">
+              <img src="https://placehold.co/640x360/008000/ffffff?text=ej1.1" alt="Vista previa del ejercicio 1.1 completado">
+            </figure>
+            <div class="tarjeta-proyecto__contenido">
+              <h3>ej1.1</h3>
+              <p>Estado completado: primer ejercicio del curso, dedicado a construir una página con HTML semántico.</p>
+              <ul class="lista-etiquetas" aria-label="Tecnologías y disciplinas">
+                <li>Ejercicio 1.1</li><li>Completado</li>
+              </ul>
+              <a class="boton tarjeta-proyecto__enlace" href="../../ejercicio-01_estructura-semantica/solucion/index.html">Ver ejercicio 1.1</a>
+            </div>
+          </article>
+
+          <article class="tarjeta-proyecto ventana">
+            <div class="ventana__barra-titulo"><span>mdit.md</span><span aria-hidden="true">□ ×</span></div>
+            <figure class="tarjeta-proyecto__imagen">
+              <img src="https://placehold.co/640x360/800080/ffffff?text=mdit" alt="Vista previa del editor Markdown mdit">
+            </figure>
+            <div class="tarjeta-proyecto__contenido">
+              <h3>mdit</h3>
+              <p>Un editor inteligente de Markdown integrado en Visual Studio Code.</p>
+              <ul class="lista-etiquetas" aria-label="Tecnologías y disciplinas">
+                <li>Markdown</li><li>Visual Studio Code</li>
+              </ul>
+              <a class="boton tarjeta-proyecto__enlace" href="#contacto">Ver proyecto mdit</a>
+            </div>
+          </article>
+
+          <article class="tarjeta-proyecto ventana">
+            <div class="ventana__barra-titulo"><span>np-software.exe</span><span aria-hidden="true">□ ×</span></div>
+            <figure class="tarjeta-proyecto__imagen">
+              <img src="https://placehold.co/640x360/808000/ffffff?text=np-software" alt="Vista previa de np-software">
+            </figure>
+            <div class="tarjeta-proyecto__contenido">
+              <h3>np-software</h3>
+              <p>Una empresa dedicada a crear software y desarrollar soluciones para distintos proyectos.</p>
+              <ul class="lista-etiquetas" aria-label="Tecnologías y disciplinas">
+                <li>Software</li><li>Empresa</li>
+              </ul>
+              <a class="boton tarjeta-proyecto__enlace" href="#contacto">Ver proyecto np-software</a>
+            </div>
+          </article>
+        </div>
+
+        <section class="carrusel-imagenes ventana" aria-labelledby="titulo-carrusel">
+          <div class="ventana__barra-titulo">
+            <span>fotos-del-escritorio.gif</span>
+            <span class="ventana__controles" aria-hidden="true">_ □ ×</span>
+          </div>
+          <div class="carrusel-imagenes__contenido">
+            <h3 id="titulo-carrusel">Galería del escritorio</h3>
+            <p>Carrusel continuo de imágenes pixel art.</p>
+
+            <div class="carrusel__visor">
+              <div class="carrusel__pista">
+                <div class="carrusel__grupo">
+                  <figure class="carrusel__diapositiva">
+                    <img src="mariquita-roja.png" alt="Mariquita roja en estilo pixel art">
+                    <figcaption>mariquita-roja.png</figcaption>
+                  </figure>
+                  <figure class="carrusel__diapositiva">
+                    <img src="clip.png" alt="Clip metálico en estilo pixel art">
+                    <figcaption>clip.png</figcaption>
+                  </figure>
+                </div>
+                <div class="carrusel__grupo" aria-hidden="true">
+                  <figure class="carrusel__diapositiva">
+                    <img src="mariquita-roja.png" alt="">
+                    <figcaption>mariquita-roja.png</figcaption>
+                  </figure>
+                  <figure class="carrusel__diapositiva">
+                    <img src="clip.png" alt="">
+                    <figcaption>clip.png</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="estudio" class="nota-estudio ventana" aria-labelledby="titulo-estudio">
+        <div class="ventana__barra-titulo"><span>acerca-de.txt</span><span aria-hidden="true">□ ×</span></div>
+        <div class="nota-estudio__contenido">
+          <h2 id="titulo-estudio">Un estudio, muchas ideas</h2>
+          <p>Diseñamos experiencias digitales y sistemas visuales para proyectos con algo propio para contar.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacto" class="pie-sitio ventana">
+      <p>© 2026 98 Studio · Hecho con c4r1ñ0.</p>
+      <a href="mailto:pieroni.nico@gmail.com">Escribime</a>
+    </footer>
+
+    <!-- TP-CHECK: 1.3 | PIERONI-NICOLAS | flex-wrap hace: que se modifique el comportamiento cuando se agregan elementos al elemento flex (contenedor), permitiendo que bajen a otra linea si no hay lugar en el eje principal. -->
+  </body>
+</html>

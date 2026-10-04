@@ -1,0 +1,126 @@
+/* Navegación: encabezado fijo, enlaces y pie de página. */
+.encabezado-sitio,
+.pie-sitio {
+  width: min(100%, 76rem);
+  margin-inline: auto;
+}
+
+.encabezado-sitio {
+  position: sticky;
+  top: 0.5rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio);
+  padding: 0.55rem 0.75rem;
+  background: var(--color-superficie);
+  border: 2px outset var(--color-resaltado);
+  box-shadow: 2px 2px var(--color-sombra);
+}
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-texto);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.marca__icono {
+  color: var(--color-primario);
+  font-size: 1.4rem;
+}
+
+.navegacion-sitio__lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navegacion-sitio a {
+  display: inline-block;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.navegacion-sitio a:hover,
+.navegacion-sitio a[aria-current="page"] {
+  color: var(--color-resaltado);
+  background: var(--color-primario);
+  border-color: var(--color-resaltado);
+}
+
+.pie-sitio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+}
+
+.pie-sitio p {
+  margin: 0;
+}
+
+@media (max-width: 42rem) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .encabezado-sitio {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .navegacion-sitio__lista {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 30rem) {
+  .pie-sitio {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .encabezado-sitio {
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .encabezado-sitio {
+      animation: compactar-encabezado 1s linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 120px;
+    }
+
+    @keyframes compactar-encabezado {
+      from {
+        padding-block: 0.55rem;
+        background-color: var(--color-superficie);
+        box-shadow: 2px 2px var(--color-sombra);
+      }
+
+      to {
+        padding-block: 0.25rem;
+        background-color: #a0a0a0;
+        box-shadow: 4px 4px var(--color-borde-oscuro);
+      }
+    }
+  }
+}
