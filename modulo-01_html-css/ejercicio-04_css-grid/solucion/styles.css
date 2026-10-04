@@ -1,0 +1,42 @@
+/* TP-CHECK: 1.4 | PIERONI-NICOLAS | grid-template-areas hace: asigna nombres a zonas de una cuadrícula para ubicar visualmente sus elementos. */
+@import url("./estructura.css");
+@import url("./componentes.css");
+
+:root {
+  color-scheme: light;
+  --color-tierra: #654321;
+  --color-tierra-oscura: #3b291b;
+  --color-bosque: #39751f;
+  --color-hoja: #69b832;
+  --color-cielo: #72c9e8;
+  --color-piedra: #777777;
+  --color-piedra-clara: #c6c6c6;
+  --color-papel: #e4e4e4;
+  --color-tinta: #202020;
+  --color-acento: #f1ce3e;
+  --ancho-contenido: 1180px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-synthesis: none;
+  color: var(--color-tinta);
+  background: #c6c6c6;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; background: #c6c6c6; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #c6c6c6;
+}
+
+img { display: block; max-width: 100%; }
+
+a { color: inherit; }
+
+button, input { font: inherit; }
+
+:focus-visible { outline: 3px dashed var(--color-acento); outline-offset: 3px; }

@@ -1,0 +1,267 @@
+/* Marca cuadriculada y navegación. */
+.marca {
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.marca__icono {
+  color: var(--color-hoja);
+  font-size: 20px;
+  text-shadow: 2px 2px #182512;
+}
+
+.marca--navbar {
+  grid-template-columns: 32px;
+  gap: 0;
+}
+
+.marca__mosaico {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+  width: 32px;
+  aspect-ratio: 1;
+  padding: 2px;
+  border: 2px solid #222;
+  background: #4b4b4b;
+  box-shadow: inset 1px 1px #888, 2px 2px #171717;
+}
+
+.marca__mosaico span { border: 1px solid rgb(0 0 0 / 35%); }
+.marca__mosaico span:nth-child(1),
+.marca__mosaico span:nth-child(3),
+.marca__mosaico span:nth-child(5),
+.marca__mosaico span:nth-child(7),
+.marca__mosaico span:nth-child(9) { background: #69b832; }
+.marca__mosaico span:nth-child(2),
+.marca__mosaico span:nth-child(4),
+.marca__mosaico span:nth-child(6),
+.marca__mosaico span:nth-child(8) { background: #76502f; }
+
+.navegacion a {
+  padding: 0.35rem 0.5rem;
+  border: 2px solid transparent;
+  font-size: 13px;
+  text-decoration: none;
+  text-shadow: 2px 2px #111;
+}
+
+.navegacion a:hover,
+.navegacion a[aria-current="page"] {
+  border-color: #aaa;
+  background: #555;
+}
+
+.barra-inventario {
+  display: grid;
+  grid-template-columns: repeat(7, 32px);
+  gap: 2px;
+  width: max-content;
+  padding: 3px;
+  border: 3px solid;
+  border-color: #171717 #d0d0d0 #d0d0d0 #171717;
+  background: #555;
+}
+
+.casilla-inventario {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 2px solid;
+  border-color: #373737 #a0a0a0 #a0a0a0 #373737;
+  background: #777;
+}
+
+.casilla-inventario:first-child {
+  outline: 2px solid var(--color-acento);
+  outline-offset: -2px;
+}
+
+.bloque {
+  display: block;
+  width: 17px;
+  height: 17px;
+  border: 2px solid rgb(0 0 0 / 35%);
+  box-shadow: inset 2px 2px rgb(255 255 255 / 22%);
+}
+
+.bloque--pasto { background: linear-gradient(#65ad39 0 32%, #76502f 32%); }
+.bloque--madera { background: repeating-linear-gradient(90deg, #8a5a31 0 4px, #a87945 4px 7px); }
+.bloque--piedra { background: #898989; box-shadow: inset 3px 2px #aaa, inset -3px -2px #666; }
+.bloque--mineral { background: #777; box-shadow: inset 4px 3px #44c7a0, inset -3px -3px #555; }
+.bloque--agua { background: repeating-linear-gradient(0deg, #248cca 0 4px, #59bae2 4px 7px); }
+
+/* Acciones, etiquetas y enlaces. */
+.boton {
+  display: inline-block;
+  padding: 0.55rem 0.7rem;
+  border: 3px solid;
+  border-color: #f3f3f3 #383838 #383838 #f3f3f3;
+  background: #777;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 2px 2px #333;
+  cursor: pointer;
+  box-shadow: inset 2px 2px #999, 3px 3px 0 #171717;
+}
+
+.boton:hover { background: var(--color-bosque); }
+
+.boton--compacto {
+  padding: 0.4rem 0.55rem;
+  font-size: 12px;
+}
+
+.etiqueta,
+.categoria {
+  margin: 0;
+  color: #245319;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cabecera .etiqueta { color: #b4e986; }
+
+.panel a,
+.lista-reciente a,
+.enlaces-sociales a {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.15em;
+}
+
+.panel a:hover,
+.lista-reciente a:hover,
+.enlaces-sociales a:hover,
+.leer-mas:hover {
+  color: #8d4c12;
+}
+
+/* Tarjetas de la galería. */
+.tarjeta {
+  display: grid;
+  grid-row: span 20;
+  grid-template-rows: 150px 1fr;
+  min-width: 0;
+  overflow: hidden;
+  border: 4px solid;
+  border-color: #f5f5f5 #555 #555 #f5f5f5;
+  background: var(--color-piedra-clara);
+  box-shadow: inset 0 0 0 2px #969696, 5px 5px 0 rgb(0 0 0 / 35%);
+}
+
+.tarjeta > .espacio-imagen {
+  width: 100%;
+  height: 150px;
+  border-bottom: 4px solid #353535;
+}
+
+.tarjeta__contenido {
+  display: grid;
+  align-content: start;
+  gap: 0.45rem;
+  padding: 0.75rem;
+}
+
+.tarjeta__contenido > * { margin: 0; }
+
+.tarjeta h3 {
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.tarjeta .fecha {
+  color: #414141;
+  font-size: 12px;
+}
+
+.tarjeta__contenido > p:not(.categoria, .fecha) {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.leer-mas {
+  align-self: end;
+  margin-top: auto;
+  color: var(--color-bosque);
+  font-weight: 700;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+.tarjeta--destacada {
+  grid-column: span 2;
+  grid-row: span 28;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(220px, 1fr) auto;
+}
+
+.tarjeta:nth-child(2) { grid-row: span 23; }
+.tarjeta:nth-child(3) { grid-row: span 18; }
+.tarjeta:nth-child(4) { grid-row: span 21; }
+.tarjeta:nth-child(5) { grid-row: span 19; }
+.tarjeta:nth-child(6) { grid-row: span 22; }
+.tarjeta--prioritaria { order: -1; }
+
+.tarjeta--destacada > .espacio-imagen {
+  min-height: 220px;
+  height: auto;
+  border-right: 0;
+  border-bottom: 4px solid #353535;
+}
+
+.tarjeta--destacada .tarjeta__contenido {
+  align-content: start;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.barra-inventario--sticky {
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  bottom: max(0.75rem, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  max-width: calc(100vw - 1rem);
+  background: rgb(55 55 55 / 78%);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 35%);
+}
+
+/* Recorre los colores brillantes de los mensajes del juego. */
+.texto-arcoiris {
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    #ff5555 0%,
+    #ffaa00 16%,
+    #ffff55 32%,
+    #55ff55 48%,
+    #55ffff 64%,
+    #5555ff 80%,
+    #ff55ff 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: recorrer-arcoiris 3s linear infinite;
+}
+
+@keyframes recorrer-arcoiris {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .texto-arcoiris { animation: none; }
+}
