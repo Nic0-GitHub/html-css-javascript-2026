@@ -50,14 +50,15 @@
 
 ```
 [ ] Resolví el ejercicio completamente sin ayuda de IA
-[ ] Usé IA para entender algún concepto, pero escribí el código yo
+[x] Usé IA para entender algún concepto, pero escribí el código yo
 [ ] Usé IA para generar un borrador que luego modifiqué y entendí
 [ ] Usé IA extensamente y completé la reflexión para entender lo que hice
 ```
 
 *Si usaste IA, describí brevemente cómo:*
 
-> ✏️ **Tu respuesta (opcional si no usaste IA):**
+> Es complicado porque reutilice el código entonces no necesite cambiar mucho, hubiera tomado más tiempo explicarle a la ia todo que hacerlo manual.
+
 
 ---
 
@@ -70,5 +71,5 @@ En una escala del 1 al 5, ¿cuánto entendés ahora el concepto central de este 
 [ ] 2 — Entiendo lo básico
 [ ] 3 — Lo entiendo bien
 [ ] 4 — Lo entiendo bien y puedo explicárselo a otro
-[ ] 5 — Podría dar una clase sobre esto
+[x] 5 — Podría dar una clase sobre esto
 ```

@@ -1,0 +1,48 @@
+/* TP-CHECK: 1.5 | PIERONI-NICOLAS | mobile-first significa: diseñar primero para pantallas pequeñas y ampliar el layout a medida que hay más espacio. */
+@import url("./estructura.css");
+@import url("./componentes.css");
+
+:root {
+  color-scheme: light;
+  --color-tierra: #654321;
+  --color-tierra-oscura: #3b291b;
+  --color-bosque: #39751f;
+  --color-hoja: #69b832;
+  --color-cielo: #72c9e8;
+  --color-piedra: #777777;
+  --color-piedra-clara: #c6c6c6;
+  --color-papel: #e4e4e4;
+  --color-tinta: #202020;
+  --color-acento: #f1ce3e;
+  --ancho-contenido: 1180px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 16px;
+  font-synthesis: none;
+  line-height: 1.6;
+  color: var(--color-tinta);
+  background: #c6c6c6;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; background: #c6c6c6; }
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: #c6c6c6;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+picture { display: block; min-width: 0; }
+a { color: inherit; }
+button, input { font: inherit; }
+:focus-visible { outline: 3px dashed var(--color-acento); outline-offset: 3px; }
+
+h1, h2, h3, p { margin-block: 0; }
+h1 { font-size: clamp(1.75rem, 1.15rem + 2.7vw, 3rem); line-height: 1.15; }
+h2 { font-size: clamp(1.25rem, 1rem + 1.2vw, 1.75rem); line-height: 1.25; }
+h3 { font-size: clamp(1rem, 0.9rem + 0.6vw, 1.3rem); line-height: 1.3; }
