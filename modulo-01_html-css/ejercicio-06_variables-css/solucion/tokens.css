@@ -1,0 +1,224 @@
+/* TP-CHECK: 1.6 | APELLIDO-NOMBRE | sin variables CSS este ejercicio sería imposible porque: los temas comparten una paleta y cambiaría muchos valores a mano. */
+
+/* Tokens de color — tema claro */
+:root {
+  color-scheme: light;
+  --color-primario: #713d2d;
+  --color-secundario: #455341;
+  --color-fondo: #f2e7d2;
+  --color-superficie: #fffaf0;
+  --color-texto: #30271f;
+  --color-texto-suave: #66594c;
+  --color-borde: #d8c9b1;
+  --color-acento: #a96520;
+  --color-primario-suave: #efe0d4;
+  --color-secundario-suave: #e2e8dc;
+  --color-acento-suave: #f5e8cc;
+  --color-info: #315d72;
+  --color-info-fondo: #e1edf2;
+  --color-exito: #3e6949;
+  --color-exito-fondo: #e2eee2;
+  --color-aviso: #79551d;
+  --color-aviso-fondo: #f5edda;
+  --color-error: #8b3b34;
+  --color-error-fondo: #f5e3df;
+  --color-texto-inverso: #fffaf0;
+
+  /* Tokens de color para las ilustraciones del cuento */
+  --art-sky-dawn-top: #d8c5aa;
+  --art-sky-dawn-mid: #edc18c;
+  --art-sky-dawn-bottom: #c98058;
+  --art-sky-glaze: rgb(249 231 191 / 68%);
+  --art-sky-shade: rgb(189 123 85 / 10%);
+  --art-sun: #f9d88e;
+  --art-sun-halo: rgb(249 216 142 / 14%);
+  --art-sun-glow: rgb(249 216 142 / 58%);
+  --art-sun-shadow: 0 0 0 1.2rem var(--art-sun-halo), 0 0 4rem var(--art-sun-glow);
+  --art-moon: #fff0d1;
+  --art-cloud: rgb(255 245 223 / 58%);
+  --art-hill-back: #947258;
+  --art-hill-front: #4d5141;
+  --art-cabin: #9c6347;
+  --art-cabin-inset: rgb(63 45 29 / 16%);
+  --art-cabin-shadow: inset 0 0 0 0.25rem var(--art-cabin-inset);
+  --art-window-frame: #513d32;
+  --art-window-light: #eabf73;
+  --art-door: #49362e;
+  --art-roof: #543a31;
+  --art-path: #c99a6e;
+  --art-caption: #fff7e7;
+  --art-caption-shadow: 0 1px 0 #30271f;
+  --art-spark: #fff0c4;
+  --art-morning-top: #d9b88c;
+  --art-morning-mid: #f2ce91;
+  --art-morning-ground: #baa078;
+  --art-day-top: #b7d0ca;
+  --art-day-mid: #e5d7ac;
+  --art-day-ground: #989878;
+  --art-night-top: #202f48;
+  --art-night-mid: #4d5260;
+  --art-night-ground: #343b3b;
+  --art-scene-sun: #f7d58e;
+  --art-scene-sun-halo: rgb(247 213 142 / 17%);
+  --art-scene-sun-shadow: 0 0 0 0.65rem var(--art-scene-sun-halo);
+  --art-noon-sun: #ffe095;
+  --art-scene-hill-back: #8b8062;
+  --art-scene-hill-front: #536047;
+  --art-day-hill-back: #8a9a7b;
+  --art-day-hill-front: #627456;
+  --art-scene-cabin: #946348;
+  --art-scene-roof: #553d32;
+  --art-scene-window: #f4d087;
+  --art-scene-door: #4f392f;
+  --art-smoke: #fff2da;
+  --art-bird: #6b5948;
+  --art-road: #d7c298;
+  --art-traveler: #744633;
+  --art-skin: #d5aa7b;
+  --art-cloak: #4c4537;
+  --art-starlight: #f4e9c8;
+  --art-city-wall: #777163;
+  --art-city-stone: #9a8d74;
+  --art-city-roof: #6a5143;
+  --art-city-gate-stone: #b19d7b;
+  --art-city-gate: #342f31;
+  --art-card-sky: #e7c78c;
+  --art-card-horizon: #ad7754;
+  --art-card-ground: #505643;
+  --art-card-sun: #fff0be;
+  --art-card-hill: #5c6148;
+  --art-card-roof: #543b31;
+  --art-card-tower: #a67854;
+  --art-ending-orbit: rgb(255 250 240 / 16%);
+  --art-ending-moon: #f0d596;
+
+  /* Superficies y texto para las tres tarjetas temáticas */
+  --chapter-morning-surface: #fff4df;
+  --chapter-morning-ink: #3c3023;
+  --chapter-morning-muted: #66594c;
+  --chapter-morning-edge: #dfc9a5;
+  --chapter-morning-accent: #8b541d;
+  --chapter-sepia-surface: #eee0c4;
+  --chapter-sepia-ink: #3e3021;
+  --chapter-sepia-muted: #65513a;
+  --chapter-sepia-edge: #c7ad84;
+  --chapter-sepia-accent: #76502a;
+  --chapter-night-surface: #283144;
+  --chapter-night-ink: #f4ead0;
+  --chapter-night-muted: #d5c9ad;
+  --chapter-night-edge: #657085;
+  --chapter-night-accent: #f0d596;
+  --art-sepia-top: #cbb38b;
+  --art-sepia-mid: #e0c49a;
+  --art-sepia-ground: #9d8563;
+  --art-sepia-sun: #f3d398;
+  --art-sepia-hill-back: #8d7a5d;
+  --art-sepia-hill-front: #655b44;
+
+  /* Escala tipográfica fluida */
+  --fs-xs: clamp(0.75rem, 0.72rem + 0.12vw, 0.8rem);
+  --fs-sm: clamp(0.875rem, 0.83rem + 0.18vw, 0.95rem);
+  --fs-base: clamp(1rem, 0.94rem + 0.25vw, 1.1rem);
+  --fs-lg: clamp(1.2rem, 1.06rem + 0.6vw, 1.5rem);
+  --fs-xl: clamp(1.55rem, 1.27rem + 1.2vw, 2.15rem);
+  --fs-2xl: clamp(2.25rem, 1.45rem + 3.4vw, 4.7rem);
+  --fs-display: clamp(3rem, 1.7rem + 5vw, 6.7rem);
+
+  /* Escala de espaciado */
+  --sp-xs: 0.5rem;
+  --sp-sm: 0.875rem;
+  --sp-md: 1.25rem;
+  --sp-lg: 2rem;
+  --sp-xl: 3.5rem;
+  --sp-2xl: 5.5rem;
+
+  /* Forma, elevación y movimiento */
+  --radius-sm: 0.35rem;
+  --radius-md: 0.8rem;
+  --radius-lg: 1.4rem;
+  --shadow-sm: 0 0.25rem 0.8rem rgb(63 45 29 / 9%);
+  --shadow-md: 0 1rem 2.5rem rgb(63 45 29 / 14%);
+  --transition-rapida: 180ms ease;
+  --transition-normal: 420ms ease;
+}
+
+/* Tema oscuro manual */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-primario: #d69a78;
+  --color-secundario: #a6bd9c;
+  --color-fondo: #171b1d;
+  --color-superficie: #22282a;
+  --color-texto: #f2e8d8;
+  --color-texto-suave: #c5b9a7;
+  --color-borde: #4d4b43;
+  --color-acento: #e8b65f;
+  --color-primario-suave: #382b27;
+  --color-secundario-suave: #29332c;
+  --color-acento-suave: #3c3424;
+  --color-info: #a9d2e5;
+  --color-info-fondo: #263741;
+  --color-exito: #acd0a7;
+  --color-exito-fondo: #29382d;
+  --color-aviso: #f0ce82;
+  --color-aviso-fondo: #3b3425;
+  --color-error: #e9a49a;
+  --color-error-fondo: #402a29;
+  --color-texto-inverso: #171b1d;
+  --shadow-sm: 0 0.25rem 0.8rem rgb(0 0 0 / 22%);
+  --shadow-md: 0 1rem 2.5rem rgb(0 0 0 / 35%);
+}
+
+/* Tema sepia adicional */
+:root[data-theme="sepia"] {
+  color-scheme: light;
+  --color-primario: #68452e;
+  --color-secundario: #566047;
+  --color-fondo: #e8d8b8;
+  --color-superficie: #f5ebd5;
+  --color-texto: #34291d;
+  --color-texto-suave: #63513a;
+  --color-borde: #cbb58e;
+  --color-acento: #8b5a20;
+  --color-primario-suave: #e7d5bb;
+  --color-secundario-suave: #dce0c9;
+  --color-acento-suave: #eee0bd;
+  --color-info: #345969;
+  --color-info-fondo: #dce6e4;
+  --color-exito: #435f3f;
+  --color-exito-fondo: #e0e6d3;
+  --color-aviso: #71511f;
+  --color-aviso-fondo: #eee3c4;
+  --color-error: #803b2d;
+  --color-error-fondo: #eedbd0;
+  --color-texto-inverso: #f5ebd5;
+}
+
+/* Preferencia del sistema cuando todavía no hay elección guardada */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --color-primario: #d69a78;
+    --color-secundario: #a6bd9c;
+    --color-fondo: #171b1d;
+    --color-superficie: #22282a;
+    --color-texto: #f2e8d8;
+    --color-texto-suave: #c5b9a7;
+    --color-borde: #4d4b43;
+    --color-acento: #e8b65f;
+    --color-primario-suave: #382b27;
+    --color-secundario-suave: #29332c;
+    --color-acento-suave: #3c3424;
+    --color-info: #a9d2e5;
+    --color-info-fondo: #263741;
+    --color-exito: #acd0a7;
+    --color-exito-fondo: #29382d;
+    --color-aviso: #f0ce82;
+    --color-aviso-fondo: #3b3425;
+    --color-error: #e9a49a;
+    --color-error-fondo: #402a29;
+    --color-texto-inverso: #171b1d;
+    --shadow-sm: 0 0.25rem 0.8rem rgb(0 0 0 / 22%);
+    --shadow-md: 0 1rem 2.5rem rgb(0 0 0 / 35%);
+  }
+}

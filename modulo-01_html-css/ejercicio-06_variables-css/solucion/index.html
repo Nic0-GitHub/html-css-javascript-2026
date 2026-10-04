@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f2e7d2">
+    <meta name="description" content="Un pequeño viaje medieval: Nico sale de su cabaña al alba y llega al castillo DesarrolloHold al caer la noche.">
+    <title>El camino de Nico — Cuentos del horizonte</title>
+    <script src="theme.js"></script>
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="components.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#historia">Saltar al cuento</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#inicio" aria-label="Cuentos del horizonte, inicio">
+        <span class="wordmark__mark" aria-hidden="true">✦</span>
+        <span>Cuentos del horizonte</span>
+      </a>
+      <nav class="site-nav" aria-label="Línea de tiempo del viaje">
+        <ol class="site-timeline">
+          <li><a href="#capitulo-inicio"><span class="site-timeline__marker"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 17h17"/><path d="M7 17a5 5 0 0 1 10 0"/><path d="M12 3v3M5.6 8.6l1.5 1.5M18.4 8.6l-1.5 1.5"/></svg></span><span>Alba</span></a></li>
+          <li><a href="#capitulo-medio"><span class="site-timeline__marker"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12.5h17"/><path d="M7 12.5a5 5 0 0 1 10 0"/><path d="M12 3v3M5.6 8.6l1.5 1.5M18.4 8.6l-1.5 1.5M8 17v2M12 17v3M16 17v2"/></svg></span><span>Atardecer</span></a></li>
+          <li><a href="#capitulo-final"><span class="site-timeline__marker"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/><path d="M17.5 3.5v2M18.5 4.5h-2"/></svg></span><span>Noche</span></a></li>
+        </ol>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema">
+        <span class="theme-toggle__icon" aria-hidden="true">☼</span>
+        <span class="theme-toggle__label">Tema</span>
+      </button>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="eyebrow__line"></span> Un cuento de un día</p>
+          <h1 id="hero-title">El camino <em>de Nico</em></h1>
+          <p class="hero__intro">Cuando el primer sol toca el tejado, Nico deja atrás su hogar. Al caer la noche, las luces del castillo DesarrolloHold le muestran el camino.</p>
+          <a class="button button--primary" href="#historia">Seguir el horizonte <span aria-hidden="true">↓</span></a>
+          <p class="hero__meta"><span aria-hidden="true">◷</span> Del alba al anochecer <span class="hero__meta-dot" aria-hidden="true">·</span> Una jornada a pie</p>
+        </div>
+
+        <div class="hero-art" role="img" aria-label="Una cabaña entre colinas, bajo el sol naciente y una luna que se despide">
+          <div class="hero-art__sky"></div>
+          <div class="hero-art__sun"></div>
+          <div class="hero-art__moon">☾</div>
+          <div class="hero-art__cloud hero-art__cloud--one"></div>
+          <div class="hero-art__cloud hero-art__cloud--two"></div>
+          <div class="hero-art__hill hero-art__hill--back"></div>
+          <div class="hero-art__hill hero-art__hill--front"></div>
+          <div class="hero-art__cabin"><span class="cabin__roof"></span><span class="cabin__body"><i></i><b></b></span></div>
+          <div class="hero-art__path"></div>
+          <span class="hero-art__caption">La primera luz, en el valle de Bruma</span>
+          <span class="hero-art__spark hero-art__spark--one">✦</span>
+          <span class="hero-art__spark hero-art__spark--two">✦</span>
+        </div>
+        <div class="hero__scroll" aria-hidden="true"><span></span> Desliza para comenzar</div>
+      </section>
+
+      <section class="story section-wrap" id="historia" aria-labelledby="story-title">
+        <div class="section-heading">
+          <p class="eyebrow"><span class="eyebrow__line"></span> Tres momentos, un solo camino</p>
+          <h2 id="story-title">El día se cuenta <em>paso a paso</em></h2>
+          <p>La luz cambia sobre el sendero. Nico avanza, y el horizonte guarda el lugar de cada recuerdo.</p>
+        </div>
+
+        <div class="journey" aria-label="El viaje de Nico a lo largo del día">
+          <article class="chapter chapter--morning" id="capitulo-inicio">
+            <div class="chapter__scene scene scene--morning" role="img" aria-label="Una cabaña de piedra al amanecer">
+              <span class="scene__moment" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 17h17"/><path d="M7 17a5 5 0 0 1 10 0"/><path d="M12 3v3M5.6 8.6l1.5 1.5M18.4 8.6l-1.5 1.5"/></svg><small>Alba</small></span>
+              <span class="scene__sun"></span><span class="scene__hill scene__hill--back"></span><span class="scene__hill scene__hill--front"></span>
+              <span class="scene__cabin"><i></i><b></b></span><span class="scene__smoke"></span><span class="scene__bird">⌁</span>
+              <span class="scene__time">I · Alba</span>
+            </div>
+            <div class="chapter__body">
+              <span class="chapter__number">01 <span>—</span> Mañana</span>
+              <h3>La puerta se abre</h3>
+              <p>En su cabaña de piedra, Nico despierta con el canto de los pájaros. Guarda pan, una capa y una vieja brújula antes de salir.</p>
+              <a class="text-link" href="#mundo">Ver el lugar <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="chapter chapter--sepia" id="capitulo-medio">
+            <div class="chapter__scene scene scene--sepia" role="img" aria-label="Un sendero entre colinas durante el atardecer">
+              <span class="scene__moment" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.5h17"/><path d="M7 12.5a5 5 0 0 1 10 0"/><path d="M12 3v3M5.6 8.6l1.5 1.5M18.4 8.6l-1.5 1.5M8 17v2M12 17v3M16 17v2"/></svg><small>Atardecer</small></span>
+              <span class="scene__hill scene__hill--back"></span><span class="scene__hill scene__hill--front"></span>
+              <span class="scene__road"></span><span class="scene__time">II · Atardecer</span>
+            </div>
+            <div class="chapter__body">
+              <span class="chapter__number">02 <span>—</span> Atardecer</span>
+              <h3>La tarde se apaga</h3>
+              <p>El sendero cruza campos y un puente estrecho. Nico saluda a una pastora y sigue hacia las torres que asoman tras las colinas.</p>
+              <a class="text-link" href="#mundo">Seguir la ruta <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="chapter chapter--night" id="capitulo-final">
+            <div class="chapter__scene scene scene--night" role="img" aria-label="El castillo de DesarrolloHold encendido bajo la luna">
+              <span class="scene__moment" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/><path d="M17.5 3.5v2M18.5 4.5h-2"/></svg><small>Noche</small></span>
+              <span class="scene__moon">☾</span><span class="scene__stars">✦　·　✧</span><span class="scene__wall"></span>
+              <span class="scene__tower scene__tower--one"></span><span class="scene__tower scene__tower--two"></span><span class="scene__gate"></span>
+              <span class="scene__time">III · Noche</span>
+            </div>
+            <div class="chapter__body">
+              <span class="chapter__number">03 <span>—</span> Llegada</span>
+              <h3>Las puertas de DesarrolloHold</h3>
+              <p>Cuando la luna sube, Nico alcanza el castillo de DesarrolloHold. Las ventanas brillan, el portón se abre, y el largo camino encuentra su final.</p>
+              <a class="text-link" href="#final">Llegar al final <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="world section-wrap" id="mundo" aria-labelledby="world-title">
+        <div class="section-heading section-heading--compact">
+          <p class="eyebrow"><span class="eyebrow__line"></span> El pequeño mundo del cuento</p>
+          <h2 id="world-title">Piedra, barro <em>y memoria</em></h2>
+          <p>Una paleta inspirada en los materiales del camino y en las horas que lo iluminan.</p>
+        </div>
+
+        <div class="world-grid">
+          <article class="world-note">
+            <span class="world-note__symbol" aria-hidden="true">⌂</span>
+            <h3>Un refugio al alba</h3>
+            <p>Muros de piedra, tejados de barro y una ventana encendida antes de partir.</p>
+          </article>
+          <article class="world-note world-note--accent">
+            <span class="world-note__symbol" aria-hidden="true">✧</span>
+            <h3>El horizonte cambia</h3>
+            <p>La luz acompaña el viaje: dorada por la mañana, azul cuando cae la noche.</p>
+          </article>
+          <aside class="palette-card" aria-labelledby="palette-title">
+            <h3 id="palette-title">Colores del viaje</h3>
+            <ul class="swatches">
+                <li><span class="swatch swatch--primario"></span><span>Barro</span><code>Primario</code></li>
+                <li><span class="swatch swatch--secundario"></span><span>Musgo</span><code>Secundario</code></li>
+                <li><span class="swatch swatch--fondo"></span><span>Pergamino</span><code>Fondo</code></li>
+                <li><span class="swatch swatch--superficie"></span><span>Papel claro</span><code>Superficie</code></li>
+                <li><span class="swatch swatch--texto"></span><span>Tinta</span><code>Texto</code></li>
+                <li><span class="swatch swatch--texto-suave"></span><span>Tinta tenue</span><code>Texto suave</code></li>
+                <li><span class="swatch swatch--borde"></span><span>Piedra</span><code>Borde</code></li>
+                <li><span class="swatch swatch--acento"></span><span>Sol</span><code>Acento</code></li>
+                <li><span class="swatch swatch--primario-suave"></span><span>Arcilla clara</span><code>Primario suave</code></li>
+                <li><span class="swatch swatch--secundario-suave"></span><span>Musgo claro</span><code>Secundario suave</code></li>
+                <li><span class="swatch swatch--acento-suave"></span><span>Luz tenue</span><code>Acento suave</code></li>
+                <li><span class="swatch swatch--info"></span><span>Información</span><code>Info</code></li>
+                <li><span class="swatch swatch--info-fondo"></span><span>Cielo pálido</span><code>Fondo info</code></li>
+                <li><span class="swatch swatch--exito"></span><span>Verde valle</span><code>Éxito</code></li>
+                <li><span class="swatch swatch--exito-fondo"></span><span>Prado claro</span><code>Fondo éxito</code></li>
+                <li><span class="swatch swatch--aviso"></span><span>Ámbar</span><code>Aviso</code></li>
+                <li><span class="swatch swatch--aviso-fondo"></span><span>Pergamino ámbar</span><code>Fondo aviso</code></li>
+                <li><span class="swatch swatch--error"></span><span>Ladrillo oscuro</span><code>Error</code></li>
+                <li><span class="swatch swatch--error-fondo"></span><span>Arcilla pálida</span><code>Fondo error</code></li>
+                <li><span class="swatch swatch--texto-inverso"></span><span>Tinta clara</span><code>Texto inverso</code></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="showcase section-wrap" aria-labelledby="showcase-title">
+        <div class="section-heading section-heading--compact">
+          <p class="eyebrow"><span class="eyebrow__line"></span> Muestrario del sistema</p>
+          <h2 id="showcase-title">Herramientas <em>del relato</em></h2>
+          <p>Los componentes comparten los mismos tokens y se adaptan al tema elegido.</p>
+        </div>
+
+        <div class="showcase-grid">
+          <article class="sample-panel type-sample">
+            <h3>Voces y títulos</h3>
+            <h1>El viejo camino</h1><h2>Una historia breve</h2><h3>La casa en la colina</h3><h4>Nota del viajero</h4>
+            <p>La mañana abre lentamente sobre los tejados.</p><small>Cuaderno de Nico · Año 16</small>
+          </article>
+          <article class="sample-panel controls-sample">
+            <h3>Acciones y señales</h3>
+            <div class="sample-row"><button class="button button--primary" type="button">Continuar</button><button class="button button--secondary" type="button">Guardar</button></div>
+            <div class="sample-row"><button class="button button--outlined" type="button">Volver</button><button class="button button--primary" type="button" disabled>Deshabilitado</button></div>
+            <div class="sample-row"><span class="badge badge--clay">Barro</span><span class="badge badge--moss">Musgo</span><span class="badge badge--gold">Dorado</span></div>
+            <div class="alert alert--info"><strong>Info</strong> El sendero sigue abierto.</div>
+            <div class="alert alert--success"><strong>Éxito</strong> Has llegado al puente.</div>
+            <div class="alert alert--warning"><strong>Aviso</strong> La noche se acerca.</div>
+            <div class="alert alert--error"><strong>Error</strong> La ruta no está disponible.</div>
+          </article>
+          <article class="sample-panel form-sample">
+            <h3>Deja una nota</h3>
+            <form>
+              <label for="traveler-name">Nombre del viajero</label>
+              <input id="traveler-name" name="nombre" type="text" placeholder="Nico">
+              <label for="traveler-message">Mensaje para el camino</label>
+              <textarea id="traveler-message" name="mensaje" rows="3" placeholder="Escribe unas palabras..."></textarea>
+              <label for="traveler-route">Siguiente destino</label>
+              <select id="traveler-route" name="destino"><option>La ciudad amurallada</option><option>El puente viejo</option></select>
+              <label for="traveler-error">Campo con error</label>
+              <input id="traveler-error" class="field--error" type="text" aria-invalid="true" aria-describedby="field-error-message" value="">
+              <small class="field-error-message" id="field-error-message">Este campo necesita una respuesta.</small>
+              <label for="traveler-disabled">Campo deshabilitado</label>
+              <input id="traveler-disabled" type="text" value="Solo lectura" disabled>
+            </form>
+          </article>
+          <article class="sample-card">
+            <div class="sample-card__art" role="img" aria-label="Una torre de piedra al atardecer"><span>☼</span><i></i><b></b></div>
+            <div class="sample-card__body"><span class="badge badge--gold">Parada del día</span><h3>La torre del vigía</h3><p>Desde aquí, el camino desciende hacia las primeras luces de la ciudad.</p><a class="button button--outlined" href="#final">Leer la nota</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="ending" id="final" aria-labelledby="ending-title">
+        <div class="ending__moon" aria-hidden="true">☾</div>
+        <p class="eyebrow"><span class="eyebrow__line"></span> Fin de la jornada</p>
+        <h2 id="ending-title">Y al fin, <em>DesarrolloHold</em></h2>
+        <p>El castillo cierra sus puertas. Nico mira una vez más hacia el horizonte y descansa: mañana, quizá, el camino continúe.</p>
+        <a class="button button--light" href="#inicio">Volver al comienzo <span aria-hidden="true">↑</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>✦ Cuentos del horizonte</span><span>Una historia para seguir con la luz</span></footer>
+  </body>
+</html>
