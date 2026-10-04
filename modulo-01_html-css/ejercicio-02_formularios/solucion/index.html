@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario de contacto accesible para dejar una consulta, sugerencia o mensaje.">
+  <title>Contacto accesible | Notas de código</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado-sitio">
+    <a class="marca" href="#inicio" aria-label="Notas de código, inicio">
+      <img src="https://placehold.co/180x60/111111/ffffff?text=NOTAS+DE+CODIGO" alt="Logotipo Notas de código">
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#formulario">Consulta</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="presentacion" aria-labelledby="titulo-principal">
+      <p class="antetitulo">Ejercicio 1.2 · Accesibilidad</p>
+      <h1 id="titulo-principal">Pedinos tu sistema</h1>
+      <p>Contanos qué necesitás y vemos juntos qué sistema puede servirte. Cada campo tiene una etiqueta visible, una ayuda concreta y validación nativa del navegador. <strong>Este formulario se envía de forma real a través de Google Drive, utilizando Google Apps Script como backend para recibir y procesar los formularios.</strong></p>
+    </section>
+
+    <section id="formulario" class="tarjeta-formulario" aria-label="Formulario para pedir un sistema">
+      <p class="referencia-campos"><span aria-hidden="true">*</span> Campo obligatorio</p>
+
+      <form action="https://script.google.com/macros/s/AKfycbwXQQGsL_rSYZtrlLtyndenvgaN8aGonAwHS57SZUOC3RKympH5n5FIoZbq76vryqM6SQ/exec" method="POST" autocomplete="on">
+        <fieldset>
+          <legend>Datos de contacto</legend>
+
+          <p class="campo">
+            <label for="nombre">Nombre <span class="obligatorio" aria-hidden="true">*</span></label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required aria-required="true" aria-describedby="nombre-ayuda nombre-error">
+            <small id="nombre-ayuda" class="ayuda-campo">Escribí tu nombre y apellido.</small>
+            <small id="nombre-error" class="error-message">Completá tu nombre para continuar.</small>
+          </p>
+
+          <p class="campo">
+            <label for="apellido">Apellido <span class="obligatorio" aria-hidden="true">*</span></label>
+            <input id="apellido" name="apellido" type="text" autocomplete="family-name" required aria-required="true" aria-describedby="apellido-ayuda apellido-error">
+            <small id="apellido-ayuda" class="ayuda-campo">Escribí tu apellido.</small>
+            <small id="apellido-error" class="error-message">Completá tu apellido para continuar.</small>
+          </p>
+
+          <p class="campo">
+            <label for="email">Mail <span class="obligatorio" aria-hidden="true">*</span></label>
+            <input id="email" name="mail" type="email" autocomplete="email" placeholder="nombre@ejemplo.com" pattern="[^\s@]+@[^\s@]+\.[^\s@]{2,}" required aria-required="true" aria-describedby="email-ayuda email-error">
+            <small id="email-ayuda" class="ayuda-campo">Usaremos este correo para responderte.</small>
+            <small id="email-error" class="error-message">Ingresá un email válido, por ejemplo nombre@ejemplo.com.</small>
+          </p>
+
+          <p class="campo">
+            <label for="telefono">Teléfono <span class="opcional">(opcional)</span></label>
+            <input id="telefono" name="telefono" type="tel" autocomplete="tel" pattern="\+?[0-9\s\(\)\-]{8,20}" aria-describedby="telefono-ayuda telefono-error">
+            <small id="telefono-ayuda" class="ayuda-campo">Podés incluir código de país y espacios.</small>
+            <small id="telefono-error" class="error-message">Ingresá un teléfono válido o dejá el campo vacío.</small>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tipo de sistema</legend>
+
+          <p class="campo">
+            <label for="motivo">¿Qué tipo de sistema necesitás? <span class="obligatorio" aria-hidden="true">*</span></label>
+            <input id="motivo" name="motivo" type="text" list="tipos-sistema" required aria-required="true" aria-describedby="motivo-ayuda motivo-error">
+            <datalist id="tipos-sistema">
+              <option value="Sistema de gestión"></option>
+              <option value="Página web"></option>
+              <option value="Aplicación mobile"></option>
+              <option value="Servicio o backend"></option>
+              <option value="Integración o API"></option>
+              <option value="Otro tipo de sistema"></option>
+            </datalist>
+            <small id="motivo-ayuda" class="ayuda-campo">Escribí o elegí la opción que más se parece a lo que querés pedir.</small>
+            <small id="motivo-error" class="error-message">Seleccioná un tipo de sistema para continuar.</small>
+          </p>
+
+          <p class="campo">
+            <label for="mensaje">Mensaje <span class="obligatorio" aria-hidden="true">*</span></label>
+            <textarea id="mensaje" name="mensaje" rows="7" required aria-required="true" aria-describedby="mensaje-ayuda mensaje-error"></textarea>
+            <small id="mensaje-ayuda" class="ayuda-campo">Contanos brevemente en qué podemos ayudarte.</small>
+            <small id="mensaje-error" class="error-message">Escribí un mensaje antes de enviar el formulario.</small>
+          </p>
+
+          <p class="campo">
+            <label for="referencias">Imagen de referencia <span class="obligatorio" aria-hidden="true">*</span></label>
+            <input id="referencias" name="referencias" type="file" accept="image/png,image/jpeg,image/webp" required aria-required="true" aria-label="Imagen de referencia" aria-describedby="referencias-ayuda referencias-error">
+            <small id="referencias-ayuda" class="ayuda-campo">Subí una sola imagen: un boceto, una referencia o una captura.</small>
+            <small id="referencias-error" class="error-message">Subí una imagen para enviar la consulta.</small>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Forma de contacto y permisos</legend>
+
+          <p class="campo opciones">
+            <span class="etiqueta-grupo">¿Cómo preferís que te contactemos? <span class="obligatorio" aria-hidden="true">*</span></span>
+            <label for="respuesta-email">
+              <input id="respuesta-email" name="tipo-respuesta" type="radio" value="email" required aria-required="true" aria-describedby="respuesta-error">
+              Mail
+            </label>
+            <label for="respuesta-telefono">
+              <input id="respuesta-telefono" name="tipo-respuesta" type="radio" value="telefono" aria-describedby="respuesta-error">
+              Teléfono
+            </label>
+            <small id="respuesta-error" class="error-message">Elegí una forma de respuesta.</small>
+          </p>
+
+          <p class="campo campo-checkbox">
+            <label for="terminos">
+              <input id="terminos" name="terminos" type="checkbox" value="acepto" required aria-required="true" aria-describedby="terminos-error">
+              Acepto que se utilicen estos datos para responder mi consulta <span class="obligatorio" aria-hidden="true">*</span>
+            </label>
+            <small id="terminos-error" class="error-message">Tenés que aceptar esta condición para enviar el formulario.</small>
+          </p>
+        </fieldset>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contacto" class="pie-sitio">
+    <p>&copy; Ejercicio 1.2 · Nicolás Pieroni · Consulta de sistema accesible sin validación JavaScript.</p>
+    <address>
+      <a href="mailto:pieroni.nico@gmail.com">pieroni.nico@gmail.com</a>
+    </address>
+  </footer>
+
+  <script>
+    const formulario = document.querySelector("form");
+    const botonEnviar = formulario.querySelector("button[type='submit']");
+    const campoReferencias = document.querySelector("#referencias");
+    const tiposImagenPermitidos = ["image/png", "image/jpeg", "image/webp"];
+    const tamanoMaximoImagen = 5 * 1024 * 1024;
+
+    function validarImagenPersonalizada() {
+      const archivo = campoReferencias.files[0];
+
+      if (!archivo) {
+        campoReferencias.setCustomValidity("");
+        return;
+      }
+
+      if (!tiposImagenPermitidos.includes(archivo.type)) {
+        campoReferencias.setCustomValidity("La imagen debe estar en formato PNG, JPEG o WebP.");
+        return;
+      }
+
+      if (archivo.size > tamanoMaximoImagen) {
+        campoReferencias.setCustomValidity("La imagen no puede superar los 5 MB.");
+        return;
+      }
+
+      campoReferencias.setCustomValidity("");
+    }
+
+    campoReferencias.addEventListener("change", validarImagenPersonalizada);
+
+    formulario.addEventListener("submit", async (evento) => {
+      evento.preventDefault();
+
+      validarImagenPersonalizada();
+      const archivo = campoReferencias.files[0];
+
+      if (!formulario.checkValidity() || !archivo) {
+        formulario.reportValidity();
+        return;
+      }
+
+      const lector = new FileReader();
+
+      botonEnviar.disabled = true;
+      botonEnviar.textContent = "Enviando...";
+
+      lector.onload = async () => {
+        const datosFormulario = new FormData(formulario);
+        const datos = Object.fromEntries(datosFormulario.entries());
+
+        datos.referencias = {
+          nombre: archivo.name,
+          tipo: archivo.type,
+          base64: lector.result
+        };
+
+        await fetch(formulario.action, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+          },
+          body: JSON.stringify(datos)
+        });
+
+        botonEnviar.textContent = "Consulta enviada";
+      };
+
+      lector.readAsDataURL(archivo);
+    });
+  </script>
+
+  <!-- La diferencia entre aria-required y required es: required valida el campo en el navegador y aria-required comunica que es obligatorio a las tecnologías que asisten a los usuarios. -->
+</body>
+</html>
