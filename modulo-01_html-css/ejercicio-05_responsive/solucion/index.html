@@ -13,7 +13,7 @@
   <body>
     <div class="pagina">
       <header class="cabecera">
-        <a class="marca marca--navbar" href="#inicio" aria-label="Bloque a bloque, ir al inicio">
+        <a class="marca marca--navegacion" href="#inicio" aria-label="Bloque a bloque, ir al inicio">
           <span class="marca__mosaico" aria-hidden="true">
             <span></span><span></span><span></span>
             <span></span><span></span><span></span>
@@ -22,19 +22,19 @@
         </a>
 
         <!-- El menú funciona sin JS porque el checkbox cambia a :checked y CSS muestra el nav que le sigue. -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-controls="nav-menu">
-        <label for="menu-toggle" class="menu-icon">
+        <input type="checkbox" id="alternador-menu" class="alternador-menu" aria-controls="menu-navegacion">
+        <label for="alternador-menu" class="icono-menu">
           <span aria-hidden="true">☰</span>
           <span class="solo-lectura">Menú</span>
         </label>
 
-        <nav class="navegacion nav-menu" id="nav-menu" aria-label="Navegación principal">
+        <nav class="menu-navegacion" id="menu-navegacion" aria-label="Navegación principal">
           <a href="#inicio" aria-current="page">Inicio</a>
           <a href="#historias">Historias</a>
           <a href="#comunidad">Comunidad</a>
         </nav>
 
-        <a class="boton boton--compacto" href="#newsletter">Unirme al mundo</a>
+        <a class="boton boton--compacto" href="#suscripcion">Unirme al mundo</a>
       </header>
 
       <main class="contenido-principal">
@@ -51,7 +51,12 @@
                 type="image/webp"
                 sizes="(min-width: 1200px) 760px, (min-width: 1024px) 58vw, calc(100vw - 2rem)"
                 srcset="public/responsive/portada-front-end-minecraft-480.webp 480w, public/responsive/portada-front-end-minecraft-960.webp 960w, public/responsive/portada-front-end-minecraft-1672.webp 1672w">
-              <img src="public/portada-front-end-minecraft.png" alt="Steve construye una aldea modular en el Overworld al amanecer." width="1672" height="941" fetchpriority="high">
+              <img
+                src="public/portada-front-end-minecraft.png"
+                alt="Steve construye una aldea modular en el Overworld al amanecer."
+                width="1672"
+                height="941"
+                fetchpriority="high">
             </picture>
             <figcaption>En la web, cada bloque puede convertirse en una pieza reutilizable.</figcaption>
           </figure>
@@ -78,22 +83,28 @@
                 <time datetime="2026-10-03">3 oct.</time>
               </li>
               <li>
-                <a href="#noticia-props-piglin">Steve, el piglin y el intercambio de props</a>
+                <a href="#noticia-propiedades-piglin">Steve, el piglin y el intercambio de props</a>
                 <time datetime="2026-10-02">2 oct.</time>
               </li>
               <li>
-                <a href="#noticia-casa-container">La casa contenedor</a>
+                <a href="#noticia-casa-contenedor">La casa contenedor</a>
                 <time datetime="2026-10-01">1 oct.</time>
               </li>
             </ul>
           </section>
 
-          <section class="panel panel--newsletter" id="newsletter">
+          <section class="panel" id="suscripcion">
             <h2>Una carta del mundo</h2>
             <p>Recibí nuevas historias y construcciones en tu correo.</p>
-            <form action="#newsletter" method="get">
+            <form action="#suscripcion" method="get">
               <label for="correo">Tu correo electrónico</label>
-              <input id="correo" name="correo" type="email" autocomplete="email" placeholder="pieroni.nico@gmail.com" required>
+              <input
+                id="correo"
+                name="correo"
+                type="email"
+                autocomplete="email"
+                placeholder="pieroni.nico@gmail.com"
+                required>
               <button class="boton" type="submit">Suscribirme</button>
             </form>
           </section>
@@ -101,9 +112,21 @@
           <section class="panel" id="comunidad">
             <h2>Encontranos</h2>
             <ul class="enlaces-sociales">
-              <li><a href="https://www.instagram.com/minecraft/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-              <li><a href="https://www.youtube.com/minecraft" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-              <li><a href="https://discord.com/invite/Minecraft" target="_blank" rel="noopener noreferrer">Discord</a></li>
+              <li>
+                <a href="https://www.instagram.com/minecraft/" target="_blank" rel="noopener noreferrer">
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/minecraft" target="_blank" rel="noopener noreferrer">
+                  YouTube
+                </a>
+              </li>
+              <li>
+                <a href="https://discord.com/invite/Minecraft" target="_blank" rel="noopener noreferrer">
+                  Discord
+                </a>
+              </li>
             </ul>
           </section>
         </aside>
@@ -123,8 +146,17 @@
           <div class="grilla-tarjetas">
             <article class="tarjeta tarjeta--destacada" id="noticia-smart-dumb">
               <picture class="tarjeta__imagen">
-                <source type="image/webp" sizes="(min-width: 1024px) 45vw, (min-width: 640px) 90vw, calc(100vw - 2rem)" srcset="public/responsive/smart-y-dumb-componentes-480.webp 480w, public/responsive/smart-y-dumb-componentes-960.webp 960w, public/responsive/smart-y-dumb-componentes-1672.webp 1672w">
-                <img src="public/smart-y-dumb-componentes.png" alt="Dos hermanos organizan un inventario de bloques: uno decide qué mostrar y el otro ordena los casilleros." width="1672" height="941" loading="lazy" decoding="async">
+                <source
+                  type="image/webp"
+                  sizes="(min-width: 1024px) 45vw, (min-width: 640px) 90vw, calc(100vw - 2rem)"
+                  srcset="public/responsive/smart-y-dumb-componentes-480.webp 480w, public/responsive/smart-y-dumb-componentes-960.webp 960w, public/responsive/smart-y-dumb-componentes-1672.webp 1672w">
+                <img
+                  src="public/smart-y-dumb-componentes.png"
+                  alt="Dos hermanos organizan un inventario de bloques: uno decide qué mostrar y el otro ordena los casilleros."
+                  width="1672"
+                  height="941"
+                  loading="lazy"
+                  decoding="async">
               </picture>
               <div class="tarjeta__contenido">
                 <p class="categoria">Componentes</p>
@@ -135,10 +167,19 @@
               </div>
             </article>
 
-            <article class="tarjeta tarjeta--prioritaria" id="noticia-props-piglin">
+            <article class="tarjeta tarjeta--prioritaria" id="noticia-propiedades-piglin">
               <picture class="tarjeta__imagen">
-                <source type="image/webp" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, calc(100vw - 2rem)" srcset="public/responsive/steve-piglin-props-480.webp 480w, public/responsive/steve-piglin-props-960.webp 960w, public/responsive/steve-piglin-props-1672.webp 1672w">
-                <img src="public/steve-piglin-props.png" alt="Steve entrega un lingote de oro a un piglin en el Nether." width="1672" height="941" loading="lazy" decoding="async">
+                <source
+                  type="image/webp"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, calc(100vw - 2rem)"
+                  srcset="public/responsive/steve-piglin-props-480.webp 480w, public/responsive/steve-piglin-props-960.webp 960w, public/responsive/steve-piglin-props-1672.webp 1672w">
+                <img
+                  src="public/steve-piglin-props.png"
+                  alt="Steve entrega un lingote de oro a un piglin en el Nether."
+                  width="1672"
+                  height="941"
+                  loading="lazy"
+                  decoding="async">
               </picture>
               <div class="tarjeta__contenido">
                 <p class="categoria">Comunicación</p>
@@ -149,10 +190,19 @@
               </div>
             </article>
 
-            <article class="tarjeta" id="noticia-casa-container">
+            <article class="tarjeta" id="noticia-casa-contenedor">
               <picture class="tarjeta__imagen">
-                <source type="image/webp" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, calc(100vw - 2rem)" srcset="public/responsive/casa-contenedor-patron-480.webp 480w, public/responsive/casa-contenedor-patron-960.webp 960w, public/responsive/casa-contenedor-patron-1672.webp 1672w">
-                <img src="public/casa-contenedor-patron.png" alt="Casa modular de bloques organizada dentro de un marco rectangular." width="1672" height="941" loading="lazy" decoding="async">
+                <source
+                  type="image/webp"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, calc(100vw - 2rem)"
+                  srcset="public/responsive/casa-contenedor-patron-480.webp 480w, public/responsive/casa-contenedor-patron-960.webp 960w, public/responsive/casa-contenedor-patron-1672.webp 1672w">
+                <img
+                  src="public/casa-contenedor-patron.png"
+                  alt="Casa modular de bloques organizada dentro de un marco rectangular."
+                  width="1672"
+                  height="941"
+                  loading="lazy"
+                  decoding="async">
               </picture>
               <div class="tarjeta__contenido">
                 <p class="categoria">Patrones de diseño</p>
@@ -163,10 +213,19 @@
               </div>
             </article>
 
-            <article class="tarjeta" id="noticia-grid-aldea">
+            <article class="tarjeta" id="noticia-aldea-cuadricula">
               <picture class="tarjeta__imagen">
-                <source type="image/webp" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, calc(100vw - 2rem)" srcset="public/responsive/aldea-css-grid-480.webp 480w, public/responsive/aldea-css-grid-960.webp 960w, public/responsive/aldea-css-grid-1672.webp 1672w">
-                <img src="public/aldea-css-grid.png" alt="Vista elevada de una aldea con casas, caminos, huertas y plaza organizados en una grilla." width="1672" height="941" loading="lazy" decoding="async">
+                <source
+                  type="image/webp"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, calc(100vw - 2rem)"
+                  srcset="public/responsive/aldea-css-grid-480.webp 480w, public/responsive/aldea-css-grid-960.webp 960w, public/responsive/aldea-css-grid-1672.webp 1672w">
+                <img
+                  src="public/aldea-css-grid.png"
+                  alt="Vista elevada de una aldea con casas, caminos, huertas y plaza organizados en una grilla."
+                  width="1672"
+                  height="941"
+                  loading="lazy"
+                  decoding="async">
               </picture>
               <div class="tarjeta__contenido">
                 <p class="categoria">CSS Grid</p>
@@ -179,8 +238,17 @@
 
             <article class="tarjeta" id="noticia-html-semantico">
               <picture class="tarjeta__imagen">
-                <source type="image/webp" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, calc(100vw - 2rem)" srcset="public/responsive/mapa-semantico-overworld-480.webp 480w, public/responsive/mapa-semantico-overworld-960.webp 960w, public/responsive/mapa-semantico-overworld-1672.webp 1672w">
-                <img src="public/mapa-semantico-overworld.png" alt="Steve acompaña a aldeanos por un mapa del Overworld con regiones e íconos reconocibles." width="1672" height="941" loading="lazy" decoding="async">
+                <source
+                  type="image/webp"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, calc(100vw - 2rem)"
+                  srcset="public/responsive/mapa-semantico-overworld-480.webp 480w, public/responsive/mapa-semantico-overworld-960.webp 960w, public/responsive/mapa-semantico-overworld-1672.webp 1672w">
+                <img
+                  src="public/mapa-semantico-overworld.png"
+                  alt="Steve acompaña a aldeanos por un mapa del Overworld con regiones e íconos reconocibles."
+                  width="1672"
+                  height="941"
+                  loading="lazy"
+                  decoding="async">
               </picture>
               <div class="tarjeta__contenido">
                 <p class="categoria">HTML semántico</p>
@@ -193,8 +261,17 @@
 
             <article class="tarjeta" id="noticia-variables-biomas">
               <picture class="tarjeta__imagen">
-                <source type="image/webp" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, calc(100vw - 2rem)" srcset="public/responsive/variables-css-biomas-480.webp 480w, public/responsive/variables-css-biomas-960.webp 960w, public/responsive/variables-css-biomas-1672.webp 1672w">
-                <img src="public/variables-css-biomas.png" alt="La misma casa y el mismo inventario aparecen en un bosque, una tundra y un desierto." width="1672" height="941" loading="lazy" decoding="async">
+                <source
+                  type="image/webp"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, calc(100vw - 2rem)"
+                  srcset="public/responsive/variables-css-biomas-480.webp 480w, public/responsive/variables-css-biomas-960.webp 960w, public/responsive/variables-css-biomas-1672.webp 1672w">
+                <img
+                  src="public/variables-css-biomas.png"
+                  alt="La misma casa y el mismo inventario aparecen en un bosque, una tundra y un desierto."
+                  width="1672"
+                  height="941"
+                  loading="lazy"
+                  decoding="async">
               </picture>
               <div class="tarjeta__contenido">
                 <p class="categoria">CSS Custom Properties</p>

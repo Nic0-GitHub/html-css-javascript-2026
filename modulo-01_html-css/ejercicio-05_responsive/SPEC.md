@@ -107,16 +107,16 @@ La agencia te pide que tomes el layout del magazine del ejercicio 1.4 y lo hagas
 - [x] **REQ-1.5.13** El menú hamburguesa funciona con un checkbox oculto + label + selector `:checked` en CSS — cero JavaScript para el toggle del menú. La estructura debe ser:
 
 ```html
-<input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
-<label for="menu-toggle" class="menu-icon">☰</label>
-<nav class="nav-menu">
+<input type="checkbox" id="alternador-menu" class="alternador-menu" aria-controls="menu-navegacion">
+<label for="alternador-menu" class="icono-menu">☰</label>
+<nav class="menu-navegacion" id="menu-navegacion">
   <!-- enlaces -->
 </nav>
 ```
 
 Y el CSS:
 ```css
-.menu-toggle:checked ~ .nav-menu {
+.alternador-menu:checked ~ .menu-navegacion {
   display: flex; /* o block, lo que corresponda */
 }
 ```
@@ -187,7 +187,7 @@ Además, en el HTML, el checkbox del menú hamburguesa debe tener un comentario 
 
 ```html
 <!-- El menú funciona sin JS porque: [tu explicación] -->
-<input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
+<input type="checkbox" id="alternador-menu" class="alternador-menu" aria-controls="menu-navegacion">
 ```
 
 ---
