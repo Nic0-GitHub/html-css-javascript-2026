@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Un magazine inspirado en el universo de Minecraft, construido con CSS Grid.">
     <title>Bloque a bloque — Magazine</title>
+    <link rel="icon" type="image/webp" href="public/wiki-minecraft-logowebp.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
@@ -14,11 +15,7 @@
     <div class="pagina">
       <header class="cabecera">
         <a class="marca marca--navbar" href="#inicio" aria-label="Bloque a bloque, ir al inicio">
-          <span class="marca__mosaico" aria-hidden="true">
-            <span></span><span></span><span></span>
-            <span></span><span></span><span></span>
-            <span></span><span></span><span></span>
-          </span>
+          <img class="marca__icono-imagen" src="public/Icon_Minecraft.webp" alt="">
         </a>
 
         <nav class="navegacion" aria-label="Navegación principal">
@@ -190,14 +187,64 @@
         <p>Un magazine hecho para quienes construyen sus propios mundos.</p>
         <small>© 2026 · Pieroni, Nicolas.</small>
         
-        <div class="barra-inventario barra-inventario--sticky" aria-hidden="true">
-          <span class="casilla-inventario"><span class="bloque bloque--pasto"></span></span>
-          <span class="casilla-inventario"><span class="bloque bloque--madera"></span></span>
-          <span class="casilla-inventario"><span class="bloque bloque--piedra"></span></span>
-          <span class="casilla-inventario"><span class="bloque bloque--mineral"></span></span>
-          <span class="casilla-inventario"><span class="bloque bloque--agua"></span></span>
-          <span class="casilla-inventario"></span>
-          <span class="casilla-inventario"></span>
+        <div class="hud-juego hud-juego--sticky" aria-label="Interfaz de supervivencia de Minecraft">
+          <div class="hud-juego__estado">
+            <section class="hud-juego__salud" aria-label="Vida">
+              <div class="hud-juego__armadura" role="img" aria-label="Diez puntos de armadura">
+                <img src="public/armor_full.png" alt=""><img src="public/armor_full.png" alt="">
+                <img src="public/armor_full.png" alt=""><img src="public/armor_full.png" alt="">
+                <img src="public/armor_full.png" alt=""><img src="public/armor_full.png" alt="">
+                <img src="public/armor_full.png" alt=""><img src="public/armor_full.png" alt="">
+                <img src="public/armor_full.png" alt=""><img src="public/armor_full.png" alt="">
+              </div>
+              <div class="hud-juego__medidor hud-juego__medidor--vida" role="img" aria-label="Diez corazones">
+                <img src="public/heart_full.png" alt=""><img src="public/heart_full.png" alt="">
+                <img src="public/heart_full.png" alt=""><img src="public/heart_full.png" alt="">
+                <img src="public/heart_full.png" alt=""><img src="public/heart_full.png" alt="">
+                <img src="public/heart_full.png" alt=""><img src="public/heart_full.png" alt="">
+                <img src="public/heart_full.png" alt=""><img src="public/heart_full.png" alt="">
+              </div>
+            </section>
+
+            <section class="hud-juego__experiencia" aria-label="Nivel de experiencia">
+              <span class="hud-juego__nivel">8</span>
+            </section>
+
+            <section class="hud-juego__hambre" aria-label="Comida">
+              <div class="hud-juego__medidor hud-juego__medidor--hambre" role="img" aria-label="Diez puntos de comida">
+                <img src="public/food_full.png" alt=""><img src="public/food_full.png" alt="">
+                <img src="public/food_full.png" alt=""><img src="public/food_full.png" alt="">
+                <img src="public/food_full.png" alt=""><img src="public/food_full.png" alt="">
+                <img src="public/food_full.png" alt=""><img src="public/food_full.png" alt="">
+                <img src="public/food_full.png" alt=""><img src="public/food_full.png" alt="">
+              </div>
+            </section>
+          </div>
+
+          <div class="hud-juego__barra-experiencia" role="img" aria-label="Barra de experiencia al 63%"><span></span></div>
+
+          <section class="hud-juego__inventario" aria-label="Inventario, nueve espacios">
+            <div class="hud-juego__barra-objetos">
+              <input type="radio" name="objeto-seleccionado" id="objeto-1" checked>
+              <label for="objeto-1" aria-label="Espada de diamante"><img src="public/diamond_sword.png" alt=""></label>
+              <input type="radio" name="objeto-seleccionado" id="objeto-2">
+              <label for="objeto-2" aria-label="Hacha de diamante"><img src="public/diamond_axe.png" alt=""></label>
+              <input type="radio" name="objeto-seleccionado" id="objeto-3">
+              <label for="objeto-3" aria-label="Pico de diamante"><img src="public/diamond_pickaxe.png" alt=""></label>
+              <input type="radio" name="objeto-seleccionado" id="objeto-4">
+              <label for="objeto-4" aria-label="Tronco de roble"><img src="public/oak_log.png" alt=""></label>
+              <input type="radio" name="objeto-seleccionado" id="objeto-5">
+              <label for="objeto-5" aria-label="Balde con agua"><img src="public/water_bucket.png" alt=""></label>
+              <input type="radio" name="objeto-seleccionado" id="objeto-6">
+              <label for="objeto-6" aria-label="Mesa de crafteo"><img src="public/crafting_table.png" alt=""></label>
+              <input type="radio" name="objeto-seleccionado" id="objeto-7">
+              <label for="objeto-7" aria-label="Espacio vacío"></label>
+              <input type="radio" name="objeto-seleccionado" id="objeto-8">
+              <label for="objeto-8" aria-label="Espacio vacío"></label>
+              <input type="radio" name="objeto-seleccionado" id="objeto-9">
+              <label for="objeto-9" aria-label="Espacio vacío"></label>
+            </div>
+          </section>
         </div>
       </footer>
     </div>

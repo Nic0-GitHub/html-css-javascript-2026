@@ -117,7 +117,13 @@ body {
 .lista-reciente,
 .enlaces-sociales { display: grid; gap: 0.6rem; margin: 0; padding: 0; list-style: none; }
 .lista-reciente li { display: grid; gap: 0.25rem; }
-.lista-reciente time { color: #414141; font-size: 13px; }
+.lista-reciente time,
+.firma time {
+  color: #8b3f1b;
+  font-weight: 700;
+}
+
+.lista-reciente time { font-size: 13px; }
 .panel--newsletter p { line-height: 1.45; }
 .panel form { display: grid; gap: 0.65rem; }
 .panel label { font-size: 13px; font-weight: 700; }
@@ -189,6 +195,13 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 350ms ease;
+}
+
+.espacio-imagen--con-foto:hover img { transform: scale(1.07); }
+
+@media (prefers-reduced-motion: reduce) {
+  .espacio-imagen--con-foto img { transition: none; }
 }
 
 @media (max-width: 760px) {

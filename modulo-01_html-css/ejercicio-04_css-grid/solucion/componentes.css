@@ -17,33 +17,19 @@
 }
 
 .marca--navbar {
-  grid-template-columns: 32px;
+  grid-template-columns: 40px;
   gap: 0;
 }
 
-.marca__mosaico {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 2px;
-  width: 32px;
-  aspect-ratio: 1;
-  padding: 2px;
-  border: 2px solid #222;
-  background: #4b4b4b;
-  box-shadow: inset 1px 1px #888, 2px 2px #171717;
+.marca__icono-imagen {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
+  background: #202020;
+  box-shadow: 2px 2px 0 #111;
+  object-fit: contain;
+  image-rendering: pixelated;
 }
-
-.marca__mosaico span { border: 1px solid rgb(0 0 0 / 35%); }
-.marca__mosaico span:nth-child(1),
-.marca__mosaico span:nth-child(3),
-.marca__mosaico span:nth-child(5),
-.marca__mosaico span:nth-child(7),
-.marca__mosaico span:nth-child(9) { background: #69b832; }
-.marca__mosaico span:nth-child(2),
-.marca__mosaico span:nth-child(4),
-.marca__mosaico span:nth-child(6),
-.marca__mosaico span:nth-child(8) { background: #76502f; }
 
 .navegacion a {
   padding: 0.35rem 0.5rem;
@@ -59,45 +45,158 @@
   background: #555;
 }
 
-.barra-inventario {
+.hud-juego {
   display: grid;
-  grid-template-columns: repeat(7, 32px);
-  gap: 2px;
-  width: max-content;
-  padding: 3px;
-  border: 3px solid;
-  border-color: #171717 #d0d0d0 #d0d0d0 #171717;
-  background: #555;
+  justify-items: center;
+  gap: 0.35rem;
+  width: min(100%, 430px);
+  padding: 0;
+  image-rendering: pixelated;
 }
 
-.casilla-inventario {
+.hud-juego__estado {
   display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  border: 2px solid;
-  border-color: #373737 #a0a0a0 #a0a0a0 #373737;
-  background: #777;
+  grid-template-columns: minmax(0, 1fr) minmax(5rem, auto) minmax(0, 1fr);
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
 }
 
-.casilla-inventario:first-child {
-  outline: 2px solid var(--color-acento);
-  outline-offset: -2px;
+.hud-juego__salud,
+.hud-juego__hambre,
+.hud-juego__experiencia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.12rem;
+  min-width: 0;
 }
 
-.bloque {
+.hud-juego__salud { align-items: flex-start; }
+.hud-juego__hambre { align-items: flex-end; }
+.hud-juego__experiencia { align-items: center; }
+
+.hud-juego__armadura,
+.hud-juego__medidor {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.08rem;
+  width: 100%;
+  min-width: 0;
+}
+
+.hud-juego__armadura { width: 100%; }
+
+.hud-juego__armadura img,
+.hud-juego__medidor img {
+  flex: 0 0 clamp(12px, 3.4vw, 15px);
+  min-width: 0;
+  width: clamp(12px, 3.4vw, 15px);
+  height: clamp(12px, 3.4vw, 15px);
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.hud-juego__barra-experiencia {
+  width: 100%;
+  height: 8px;
+  background: url("public/experience_bar_background.png") center / 100% 100% no-repeat;
+  box-shadow: 0 1px 0 rgb(255 255 255 / 30%);
+}
+
+.hud-juego__nivel {
+  color: #80e733;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 2px 2px #17300b;
+}
+
+.hud-juego__barra-experiencia span {
   display: block;
-  width: 17px;
-  height: 17px;
-  border: 2px solid rgb(0 0 0 / 35%);
-  box-shadow: inset 2px 2px rgb(255 255 255 / 22%);
+  width: 63%;
+  height: 100%;
+  background: url("public/experience_bar_progress.png") left center / 100% 100% no-repeat;
 }
 
-.bloque--pasto { background: linear-gradient(#65ad39 0 32%, #76502f 32%); }
-.bloque--madera { background: repeating-linear-gradient(90deg, #8a5a31 0 4px, #a87945 4px 7px); }
-.bloque--piedra { background: #898989; box-shadow: inset 3px 2px #aaa, inset -3px -2px #666; }
-.bloque--mineral { background: #777; box-shadow: inset 4px 3px #44c7a0, inset -3px -3px #555; }
-.bloque--agua { background: repeating-linear-gradient(0deg, #248cca 0 4px, #59bae2 4px 7px); }
+.hud-juego__inventario {
+  width: 100%;
+}
+
+.hud-juego__barra-objetos {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 182 / 22;
+  padding: 0;
+  background: url("public/hotbar.png") center / 100% 100% no-repeat;
+  box-shadow: 0 2px 0 #000;
+}
+
+.hud-juego__barra-objetos input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+  clip-path: inset(50%);
+}
+
+.hud-juego__barra-objetos label {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hud-juego__barra-objetos label img {
+  position: absolute;
+  inset: 12%;
+  width: 76%;
+  height: 76%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.hud-juego__barra-objetos input:checked + label {
+  background: url("public/hotbar_selection.png") center / 100% 100% no-repeat;
+}
+
+@supports (animation-timeline: scroll(root block)) {
+  .hud-juego__barra-objetos input:checked + label { background: none; }
+
+  .hud-juego__barra-objetos::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    inset: 0 auto 0 0;
+    width: 11.111%;
+    background: url("public/hotbar_selection.png") center / 100% 100% no-repeat;
+    pointer-events: none;
+    animation: recorrer-casilleros 1ms steps(8, end) both;
+    animation-timeline: scroll(root block);
+  }
+}
+
+@keyframes recorrer-casilleros {
+  from { transform: translateX(0); }
+  to { transform: translateX(800%); }
+}
+
+.hud-juego__barra-objetos input:focus-visible + label {
+  outline: 2px solid #fff;
+  outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hud-juego__barra-objetos label { transition: none; }
+}
 
 /* Acciones, etiquetas y enlaces. */
 .boton {
@@ -182,8 +281,9 @@
 }
 
 .tarjeta .fecha {
-  color: #414141;
+  color: #8b3f1b;
   font-size: 12px;
+  font-weight: 700;
 }
 
 .tarjeta__contenido > p:not(.categoria, .fecha) {
@@ -226,16 +326,18 @@
   padding: clamp(1rem, 3vw, 2rem);
 }
 
-.barra-inventario--sticky {
+.hud-juego--sticky {
   position: fixed;
   z-index: 10;
   left: 50%;
   bottom: max(0.75rem, env(safe-area-inset-bottom));
   transform: translateX(-50%);
-  max-width: calc(100vw - 1rem);
-  background: rgb(55 55 55 / 78%);
-  backdrop-filter: blur(4px);
-  box-shadow: 0 4px 16px rgb(0 0 0 / 35%);
+  max-width: calc(100vw - 2rem);
+}
+
+@media (max-width: 680px) {
+  .hud-juego { width: min(100%, 380px); }
+  .hud-juego__estado { grid-template-columns: minmax(0, 1fr) minmax(4rem, auto) minmax(0, 1fr); }
 }
 
 /* Recorre los colores brillantes de los mensajes del juego. */
