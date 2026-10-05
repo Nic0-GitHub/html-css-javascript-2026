@@ -1,4 +1,4 @@
-/* TP-CHECK: 1.6 | APELLIDO-NOMBRE | sin variables CSS este ejercicio sería imposible porque: los temas comparten una paleta y cambiaría muchos valores a mano. */
+/* TP-CHECK: 1.6 | PIERONI-NICOLAS | sin variables CSS este ejercicio sería imposible porque: los temas comparten una paleta y cambiaría muchos valores a mano. */
 
 /* Tokens de color — tema claro */
 :root {
@@ -10,7 +10,7 @@
   --color-texto: #30271f;
   --color-texto-suave: #66594c;
   --color-borde: #d8c9b1;
-  --color-acento: #a96520;
+  --color-acento: #8a4b13;
   --color-primario-suave: #efe0d4;
   --color-secundario-suave: #e2e8dc;
   --color-acento-suave: #f5e8cc;
@@ -38,6 +38,8 @@
   --art-sun-halo: rgb(249 216 142 / 14%);
   --art-sun-glow: rgb(249 216 142 / 58%);
   --art-sun-shadow: 0 0 0 1.2rem var(--art-sun-halo), 0 0 4rem var(--art-sun-glow);
+  --art-hero-shadow-suave: 0 0 0.75rem var(--art-sun-halo);
+  --art-hero-shadow-intensa: 0 0 1.25rem var(--art-sun-glow);
   --art-moon: #fff0d1;
   --art-cloud: rgb(255 245 223 / 58%);
   --art-hill-back: #947258;
@@ -52,6 +54,15 @@
   --art-path: #c99a6e;
   --art-caption: #fff7e7;
   --art-caption-shadow: 0 1px 0 #30271f;
+  --art-inicial-shadow: 0 0.25rem 0.4rem rgb(63 45 29 / 22%);
+  --art-pergamino-borde: #9c7747;
+  --art-pergamino-fondo: #ead5a9;
+  --art-pergamino-tinta: #493a29;
+  --art-pergamino-adornos: #875d2d;
+  --art-pergamino-textura: radial-gradient(ellipse at 8% 12%, rgb(255 250 225 / 72%), transparent 48%), radial-gradient(ellipse at 94% 88%, rgb(160 115 59 / 20%), transparent 42%), repeating-linear-gradient(0deg, rgb(112 79 43 / 7%) 0, rgb(112 79 43 / 7%) 1px, transparent 1px, transparent 4px), linear-gradient(135deg, #f3e4c2, #e1c795);
+  --art-pergamino-sombra: inset 0 0 0 5px rgb(255 248 221 / 52%), inset 0 0 1.8rem rgb(110 75 35 / 15%), 0 0.55rem 1rem rgb(63 45 29 / 17%);
+  --art-pergamino-filete: rgb(107 73 36 / 42%);
+  --art-pergamino-resalte: rgb(255 248 221 / 55%);
   --art-spark: #fff0c4;
   --art-morning-top: #d9b88c;
   --art-morning-mid: #f2ce91;
@@ -130,16 +141,28 @@
 
   /* Escala de espaciado */
   --sp-xs: 0.5rem;
+  --sp-micro: 0.15rem;
+  --sp-mini: 0.2rem;
+  --sp-capitular-superior: 0.02em;
+  --sp-capitular-lateral: 0.04em;
   --sp-sm: 0.875rem;
   --sp-md: 1.25rem;
   --sp-lg: 2rem;
   --sp-xl: 3.5rem;
   --sp-2xl: 5.5rem;
+  --ancho-contenido: 76rem;
+  --tracking-marca: 0.02em;
+  --tracking-etiqueta: 0.14em;
+  --tracking-titulo: -0.025em;
+  --tracking-titulo-seccion: -0.035em;
+  --tracking-capitulo: 0.13em;
+  --tracking-estrellas: 0.3rem;
 
   /* Forma, elevación y movimiento */
   --radius-sm: 0.35rem;
   --radius-md: 0.8rem;
   --radius-lg: 1.4rem;
+  --radius-pill: 99rem;
   --shadow-sm: 0 0.25rem 0.8rem rgb(63 45 29 / 9%);
   --shadow-md: 0 1rem 2.5rem rgb(63 45 29 / 14%);
   --transition-rapida: 180ms ease;
@@ -183,7 +206,7 @@
   --color-texto: #34291d;
   --color-texto-suave: #63513a;
   --color-borde: #cbb58e;
-  --color-acento: #8b5a20;
+  --color-acento: #784711;
   --color-primario-suave: #e7d5bb;
   --color-secundario-suave: #dce0c9;
   --color-acento-suave: #eee0bd;

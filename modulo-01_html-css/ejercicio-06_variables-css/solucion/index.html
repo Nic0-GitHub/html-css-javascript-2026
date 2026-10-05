@@ -208,8 +208,18 @@
               <label for="traveler-error">Campo con error</label>
               <input id="traveler-error" class="field--error" type="text" aria-invalid="true" aria-describedby="field-error-message" value="">
               <small class="field-error-message" id="field-error-message">Este campo necesita una respuesta.</small>
+              <label for="message-error">Mensaje con error</label>
+              <textarea id="message-error" class="field--error" rows="2" aria-invalid="true" aria-describedby="message-error-help"></textarea>
+              <small class="field-error-message" id="message-error-help">El mensaje necesita más detalles.</small>
+              <label for="route-error">Destino con error</label>
+              <select id="route-error" class="field--error" aria-invalid="true" aria-describedby="route-error-help"><option value="">Elegí un destino</option></select>
+              <small class="field-error-message" id="route-error-help">Seleccioná un destino válido.</small>
               <label for="traveler-disabled">Campo deshabilitado</label>
               <input id="traveler-disabled" type="text" value="Solo lectura" disabled>
+              <label for="message-disabled">Mensaje deshabilitado</label>
+              <textarea id="message-disabled" rows="2" disabled>El relato terminó.</textarea>
+              <label for="route-disabled">Destino deshabilitado</label>
+              <select id="route-disabled" disabled><option>Sin rutas disponibles</option></select>
             </form>
           </article>
           <article class="sample-card">
