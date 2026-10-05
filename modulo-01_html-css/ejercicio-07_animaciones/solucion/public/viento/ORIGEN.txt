@@ -1,0 +1,11 @@
+Efecto: Wind, de The Juice Box / The Juice Pack
+Autor: Nick Case
+Fuente: https://lpc.opengameart.org/content/the-juice-box
+Licencia: CC0 1.0 (dominio público; atribución no obligatoria).
+
+Archivos incluidos en esta carpeta:
+- animacion-viento.gif: animación lista para usar en la página.
+- spritesheet-viento.png y spritesheet-viento.json: atlas y metadatos originales.
+- LICENCIA.txt: texto de licencia incluido en el paquete original.
+
+El paquete original también incluye secuencias PNG para la animación de viento.

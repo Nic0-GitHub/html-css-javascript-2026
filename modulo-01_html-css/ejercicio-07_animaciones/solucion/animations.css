@@ -1,0 +1,51 @@
+/* Apariciones activadas por IntersectionObserver. */
+.revelar.visible{animation-fill-mode:forwards}
+.entrada-fundido.visible{animation:aparecer 700ms ease-out forwards}
+.entrada-abajo.visible{animation:subir 850ms cubic-bezier(.2,.75,.25,1) forwards}
+.entrada-lateral.visible{animation:entrar 900ms cubic-bezier(.2,.75,.25,1) forwards}
+.titulo-maquina.visible{animation:escribir 1100ms steps(18,end) 120ms forwards}
+.hero__ruta.visible li{animation:subir 700ms ease-out both}
+.hero__ruta.visible li:nth-child(2){animation-delay:150ms}
+.hero__ruta.visible li:nth-child(3){animation-delay:300ms}
+.pista:nth-child(2).visible{animation-delay:160ms}.pista:nth-child(3).visible{animation-delay:320ms}
+
+/* Movimiento ambiental, siempre con transform u opacity. */
+.spinner{animation:girar 900ms linear infinite}
+.hero__haz{animation:respirar-haz 1400ms ease-in-out infinite alternate}
+.pulso-nuclear{transform-box:fill-box;transform-origin:center;animation:pulso 1450ms ease-in-out infinite}
+.pulso-nuclear__nucleo{transform-box:fill-box;transform-origin:center;animation:nucleo 1100ms ease-in-out infinite alternate}
+.gema-luz{transform-box:fill-box;transform-origin:center;animation:brillo 1350ms ease-in-out infinite alternate}
+.gema-destello{transform-box:fill-box;transform-origin:center;animation:destello 1200ms ease-in-out infinite alternate}
+.boton--final{animation:cta 1450ms ease-in-out infinite}
+.boton__pulso{animation:latido 1450ms ease-in-out infinite}
+
+/* El indicador de profundidad acompaña el desplazamiento donde hay soporte. */
+@supports (animation-timeline:scroll(root block)){
+  .profundidad span{animation:avance 1000ms linear both;animation-timeline:scroll(root block);animation-range:0% 100%}
+  .hero__fondo{animation:parallax-fondo 1000ms linear both;animation-timeline:scroll(root block);animation-range:0% 20%}
+  .hero__pozo{animation:parallax-pozo 1000ms linear both;animation-timeline:scroll(root block);animation-range:0% 20%}
+  .hero__roca{animation:parallax-roca 1000ms linear both;animation-timeline:scroll(root block);animation-range:0% 20%}
+}
+
+@keyframes aparecer{from{opacity:0}to{opacity:1}}
+@keyframes subir{from{opacity:0;transform:translateY(1.5rem)}to{opacity:1;transform:translateY(0)}}
+@keyframes entrar{from{opacity:0;transform:translateX(-1.7rem)}to{opacity:1;transform:translateX(0)}}
+@keyframes escribir{from{opacity:0;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}
+@keyframes girar{to{transform:rotate(1turn)}}
+@keyframes respirar-haz{from{opacity:.45;transform:translate(-50%,-50%) scale(.84)}to{opacity:.95;transform:translate(-50%,-50%) scale(1.08)}}
+@keyframes pulso{0%,100%{opacity:.38;transform:scale(.72)}50%{opacity:1;transform:scale(1.12)}}
+@keyframes nucleo{from{opacity:.62;transform:scale(.82)}to{opacity:1;transform:scale(1.16)}}
+@keyframes brillo{from{opacity:.54;transform:scale(.86)}to{opacity:1;transform:scale(1.08)}}
+@keyframes destello{from{opacity:.38;transform:scale(.92)}to{opacity:1;transform:scale(1.06)}}
+@keyframes cta{0%,100%{transform:scale(.98)}50%{transform:scale(1.025)}}
+@keyframes latido{0%,100%{transform:scale(.92)}50%{transform:scale(1.08)}}
+@keyframes avance{from{transform:translateX(-2rem)}to{transform:translateX(2rem)}}
+@keyframes parallax-fondo{from{transform:translateZ(-3rem) translateY(-1rem) scale(1.13)}to{transform:translateZ(-3rem) translateY(1rem) scale(1.13)}}
+@keyframes parallax-pozo{from{transform:translateZ(-1.5rem) translateY(-1.5rem) scale(1.06)}to{transform:translateZ(-1.5rem) translateY(1.5rem) scale(1.06)}}
+@keyframes parallax-roca{from{transform:translateZ(1rem) translateY(-2rem) scale(1.03)}to{transform:translateZ(1rem) translateY(2rem) scale(1.03)}}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;animation-timeline:auto!important;transition-duration:.01ms!important}
+  .revelar{opacity:1!important;transform:none!important;clip-path:none!important}
+}
+/* TP-CHECK: 1.7 | PIERONI-NICOLAS | prefers-reduced-motion existe porque: respeta a quienes necesitan reducir el movimiento y mantiene el contenido visible. */

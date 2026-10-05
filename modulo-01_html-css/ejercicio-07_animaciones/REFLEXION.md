@@ -34,15 +34,16 @@
 
 ### 3.1 — ¿Qué fue lo más difícil de este ejercicio y cómo lo resolviste?
 
-> ✏️ **Tu respuesta:**
+> Las animaciones, son de las cosas que más flojera me da realizar porque en mis paginas casi nunca las uso.
+> solo hago bordes, estilos, colores y no suelo hacer cosas con animaciones complicadas.
 
 ### 3.2 — ¿Qué cambiarías si tuvieras que hacerlo de nuevo?
 
-> ✏️ **Tu respuesta:**
+> Buscaría mejores svg con animaciones para la pagina.
 
 ### 3.3 — ¿Qué alternativas consideraste y por qué las descartaste?
 
-> ✏️ **Tu respuesta:**
+> La idea de un arbol que crece desde la copa hacia las raices con themes basados en la tematica natural (hojas, madera, suelo).
 
 ---
 
@@ -50,14 +51,14 @@
 
 ```
 [ ] Resolví el ejercicio completamente sin ayuda de IA
-[ ] Usé IA para entender algún concepto, pero escribí el código yo
+[x] Usé IA para entender algún concepto, pero escribí el código yo
 [ ] Usé IA para generar un borrador que luego modifiqué y entendí
 [ ] Usé IA extensamente y completé la reflexión para entender lo que hice
 ```
 
 *Si usaste IA, describí brevemente cómo:*
 
-> ✏️ **Tu respuesta (opcional si no usaste IA):**
+> Lo mismo que lo mencionado en las en las anteriores. borrador (especialemnte para los SVG) y luego ciclos de mejora.
 
 ---
 
@@ -68,7 +69,10 @@ En una escala del 1 al 5, ¿cuánto entendés ahora el concepto central de este 
 ```
 [ ] 1 — Muy poco, necesito repasar
 [ ] 2 — Entiendo lo básico
-[ ] 3 — Lo entiendo bien
+[x] 3 — Lo entiendo bien
 [ ] 4 — Lo entiendo bien y puedo explicárselo a otro
 [ ] 5 — Podría dar una clase sobre esto
 ```
+
+Como dije, las animaciones ni son mi punto fuerte ni menos se mucho sobre ellas más que lo basico.
+Las entiendo se explicar para que sirven y porque se usan pero no como son en profundidad.

@@ -21,38 +21,38 @@ El cliente de la agencia quiere una **landing page animada** para el lanzamiento
 ### Criterios de aceptación obligatorios
 
 **Animaciones de entrada (scroll-triggered)**
-- [ ] **REQ-1.7.1** Los elementos de la página tienen animaciones de aparición al entrar al viewport. Usá `@keyframes` + `animation` con `animation-fill-mode: forwards`
-- [ ] **REQ-1.7.2** Implementar al menos 3 tipos de entrada diferentes: fade in, slide from bottom, slide from side
-- [ ] **REQ-1.7.3** Las animaciones se activan agregando una clase `.visible` via JavaScript cuando el elemento entra al viewport usando `IntersectionObserver` (el JS debe ser mínimo — la animación en sí es CSS)
-- [ ] **REQ-1.7.4** Los elementos tienen `opacity: 0` por defecto y la clase `.visible` los hace aparecer — así funcionan correctamente sin JS
+- [x] **REQ-1.7.1** Los elementos de la página tienen animaciones de aparición al entrar al viewport. Usá `@keyframes` + `animation` con `animation-fill-mode: forwards`
+- [x] **REQ-1.7.2** Implementar al menos 3 tipos de entrada diferentes: fade in, slide from bottom, slide from side
+- [x] **REQ-1.7.3** Las animaciones se activan agregando una clase `.visible` via JavaScript cuando el elemento entra al viewport usando `IntersectionObserver` (el JS debe ser mínimo — la animación en sí es CSS)
+- [x] **REQ-1.7.4** Los elementos tienen `opacity: 0` por defecto y la clase `.visible` los hace aparecer — así funcionan correctamente sin JS
 
 **Animaciones de interacción**
-- [ ] **REQ-1.7.5** El botón principal de CTA tiene una animación de hover con `transition` (no `animation`)
-- [ ] **REQ-1.7.6** Hay al menos un elemento con una animación de pulso o flotación continua usando `@keyframes` con `animation-iteration-count: infinite`
-- [ ] **REQ-1.7.7** Los links de navegación tienen una animación de subrayado en hover usando `::after` y `transform: scaleX()`
-- [ ] **REQ-1.7.8** Hay un loader/spinner CSS puro (sin imágenes, sin JS) usando `@keyframes`
+- [x] **REQ-1.7.5** El botón principal de CTA tiene una animación de hover con `transition` (no `animation`)
+- [x] **REQ-1.7.6** Hay al menos un elemento con una animación de pulso o flotación continua usando `@keyframes` con `animation-iteration-count: infinite`
+- [x] **REQ-1.7.7** Los links de navegación tienen una animación de subrayado en hover usando `::after` y `transform: scaleX()`
+- [x] **REQ-1.7.8** Hay un loader/spinner CSS puro (sin imágenes, sin JS) usando `@keyframes`
 
 **Performance y accesibilidad**
-- [ ] **REQ-1.7.9** Todas las animaciones de movimiento usan `transform` y/o `opacity`, NUNCA propiedades que disparan layout como `top`, `left`, `width`, `height`, `margin`
-- [ ] **REQ-1.7.10** El archivo CSS incluye el bloque `@media (prefers-reduced-motion: reduce)` que deshabilita o simplifica **todas** las animaciones para usuarios que lo requieren
-- [ ] **REQ-1.7.11** Ninguna animación usa `animation-duration` menor a 150ms (demasiado rápido) ni mayor a 1500ms (demasiado lento para interacciones)
+- [x] **REQ-1.7.9** Todas las animaciones de movimiento usan `transform` y/o `opacity`, NUNCA propiedades que disparan layout como `top`, `left`, `width`, `height`, `margin`
+- [x] **REQ-1.7.10** El archivo CSS incluye el bloque `@media (prefers-reduced-motion: reduce)` que deshabilita o simplifica **todas** las animaciones para usuarios que lo requieren
+- [x] **REQ-1.7.11** Ninguna animación usa `animation-duration` menor a 150ms (demasiado rápido) ni mayor a 1500ms (demasiado lento para interacciones)
 
 **Contenido de la página**
-- [ ] **REQ-1.7.12** La landing tiene al menos estas secciones, todas con sus animaciones:
+- [x] **REQ-1.7.12** La landing tiene al menos estas secciones, todas con sus animaciones:
   - Hero: título animado letra por letra o palabra por palabra
   - Features: 3 tarjetas con íconos que aparecen escalonadas (`animation-delay`)
   - Testimonios: carousel estático con 3 citas
   - CTA final: botón con efecto de "respiración" (escala infinite)
 
 **Técnica avanzada (obligatorio uno de los dos)**
-- [ ] **REQ-1.7.13-A** Implementar una animación con `clip-path` para revelar una imagen o sección
-- [ ] **REQ-1.7.13-B** Implementar scroll-driven animations usando la propiedad CSS `animation-timeline: scroll()` (verificar soporte en [caniuse.com](https://caniuse.com))
+- [x] **REQ-1.7.13-A** Implementar una animación con `clip-path` para revelar una imagen o sección
+- [x] **REQ-1.7.13-B** Implementar scroll-driven animations usando la propiedad CSS `animation-timeline: scroll()` (verificar soporte en [caniuse.com](https://caniuse.com))
 
 ### Criterios opcionales (bonus)
 
-- [ ] **REQ-1.7.B1** Implementar un efecto de "parallax" CSS puro usando `transform: translateZ()` en un contenedor con `perspective`
-- [ ] **REQ-1.7.B2** La animación del hero usa `@counter-style` o `CSS Houdini` para algún efecto visual
-- [ ] **REQ-1.7.B3** Crear una animación de "typewriter" usando solo CSS (`steps()` en keyframes)
+- [x] **REQ-1.7.B1** Implementar un efecto de "parallax" CSS puro usando `transform: translateZ()` en un contenedor con `perspective`
+- [x] **REQ-1.7.B2** La animación del hero usa `@counter-style` o `CSS Houdini` para algún efecto visual
+- [x] **REQ-1.7.B3** Crear una animación de "typewriter" usando solo CSS (`steps()` en keyframes)
 
 ---
 
