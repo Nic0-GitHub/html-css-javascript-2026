@@ -41,6 +41,8 @@ Usar texto normal sobre fondos de superficie con contraste WCAG AA como objetivo
 | `--fs-2xl` | Títulos destacados. |
 | `--fs-display` | Título principal de la portada. |
 
+`--fuente-texto` usa Alegreya para mantener una lectura cómoda. `--fuente-titulos` usa Cormorant Garamond en los encabezados: conserva un aire clásico con formas claras y legibles. La inicial «E» de la portada es una letra capitular ornamental dibujada como SVG; el título completo se conserva para lectores de pantalla. Las fuentes se cargan desde Google Fonts y tienen alternativas del sistema.
+
 Los tamaños usan `clamp()` para adaptarse al ancho disponible.
 
 ## Espaciado y forma
@@ -52,4 +54,4 @@ Los tamaños usan `clamp()` para adaptarse al ancho disponible.
 
 ## Componentes y movimiento
 
-Los estilos de componentes están en `components.css`. La ilustración se construye con capas y formas CSS, sin imágenes vectoriales externas. Las animaciones sugieren el ascenso del sol, las nubes y un brillo discreto; la consulta `prefers-reduced-motion` reduce el movimiento para quienes así lo prefieren.
+Los estilos de componentes están en `components.css`. La ilustración circular de la portada se construye con capas y formas CSS; la capitular está dibujada con SVG en el HTML. Las animaciones y la consulta `prefers-reduced-motion` mantienen el movimiento discreto y respetan la preferencia del sistema.

@@ -6,6 +6,9 @@
     <meta name="theme-color" content="#f2e7d2">
     <meta name="description" content="Un pequeño viaje medieval: Nico sale de su cabaña al alba y llega al castillo DesarrolloHold al caer la noche.">
     <title>El camino de Nico — Cuentos del horizonte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
     <script src="theme.js"></script>
     <link rel="stylesheet" href="tokens.css">
     <link rel="stylesheet" href="base.css">
@@ -36,23 +39,34 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero__copy">
           <p class="eyebrow"><span class="eyebrow__line"></span> Un cuento de un día</p>
-          <h1 id="hero-title">El camino <em>de Nico</em></h1>
+          <h1 id="hero-title">
+            <span class="hero__titulo-visual" aria-hidden="true">
+              <svg class="hero__inicial" viewBox="0 0 112 112" focusable="false">
+                <rect x="3" y="3" width="106" height="106" rx="10" fill="#713d2d" stroke="#d7b36d" stroke-width="4" />
+                <rect x="11" y="11" width="90" height="90" rx="7" fill="none" stroke="#f3db9c" stroke-width="1.5" />
+                <path d="M18 31c9 1 13-4 11-10-1-4-5-5-8-2-2 2-1 5 2 5m61 57c-9-1-13 4-11 10 1 4 5 5 8 2 2-2 1-5-2-5" fill="none" stroke="#e8c779" stroke-width="2" stroke-linecap="round" />
+                <path d="M37 22h48l-5 13H53v15h25l-6 12H53v17h33l-5 13H34l6-13V35z" fill="#f3db9c" />
+                <circle cx="23" cy="82" r="2.5" fill="#e8c779" />
+                <circle cx="89" cy="27" r="2.5" fill="#e8c779" />
+                <path d="M17 53c6-7 12-7 17 0m44 30c6-7 12-7 17 0" fill="none" stroke="#e8c779" stroke-width="1.5" />
+              </svg>
+              l camino <em>de Nico</em>
+            </span>
+            <span class="solo-lectura">El camino de Nico</span>
+          </h1>
           <p class="hero__intro">Cuando el primer sol toca el tejado, Nico deja atrás su hogar. Al caer la noche, las luces del castillo DesarrolloHold le muestran el camino.</p>
           <a class="button button--primary" href="#historia">Seguir el horizonte <span aria-hidden="true">↓</span></a>
-          <p class="hero__meta"><span aria-hidden="true">◷</span> Del alba al anochecer <span class="hero__meta-dot" aria-hidden="true">·</span> Una jornada a pie</p>
         </div>
 
-        <div class="hero-art" role="img" aria-label="Una cabaña entre colinas, bajo el sol naciente y una luna que se despide">
+        <div class="hero-art" role="img" aria-label="Una cabaña entre colinas bajo el sol naciente">
           <div class="hero-art__sky"></div>
           <div class="hero-art__sun"></div>
-          <div class="hero-art__moon">☾</div>
           <div class="hero-art__cloud hero-art__cloud--one"></div>
           <div class="hero-art__cloud hero-art__cloud--two"></div>
           <div class="hero-art__hill hero-art__hill--back"></div>
           <div class="hero-art__hill hero-art__hill--front"></div>
           <div class="hero-art__cabin"><span class="cabin__roof"></span><span class="cabin__body"><i></i><b></b></span></div>
           <div class="hero-art__path"></div>
-          <span class="hero-art__caption">La primera luz, en el valle de Bruma</span>
           <span class="hero-art__spark hero-art__spark--one">✦</span>
           <span class="hero-art__spark hero-art__spark--two">✦</span>
         </div>
